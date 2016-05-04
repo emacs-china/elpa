@@ -1,0 +1,188 @@
+** 搭建一个本地 Gnu-elpa 镜像
+
+（初步想法）
+
+- 创建目录
+
+#+BEGIN_SRC shell
+  mkdir /tmp/elpa
+  cp extract-package-url.el /tmp/elpa
+  cd /tmp/elpa
+#+END_SRC
+
+#+RESULTS:
+
+- 下载 Package
+
+#+BEGIN_SRC shell :dir /tmp/elpa :exports output
+  emacs -Q --batch -l extract-package-url.el | tee output.txt
+  # 需要较长时间
+  # grep '^http' output.txt | xargs -P 8 wget
+#+END_SRC
+
+#+RESULTS:
+| [[http://elpa.gnu.org/packages/ztree-1.0.3.tar]]              |
+| [[http://elpa.gnu.org/packages/yasnippet-0.9.1.tar]]          |
+| [[http://elpa.gnu.org/packages/xpm-1.0.3.tar]]                |
+| [[http://elpa.gnu.org/packages/xelb-0.6.tar]]                 |
+| [[http://elpa.gnu.org/packages/xclip-1.3.el]]                 |
+| [[http://elpa.gnu.org/packages/wpuzzle-1.1.el]]               |
+| [[http://elpa.gnu.org/packages/wisi-1.1.2.tar]]               |
+| [[http://elpa.gnu.org/packages/windresize-0.1.el]]            |
+| [[http://elpa.gnu.org/packages/websocket-1.5.tar]]            |
+| [[http://elpa.gnu.org/packages/web-server-0.1.1.tar]]         |
+| [[http://elpa.gnu.org/packages/wconf-0.2.0.el]]               |
+| [[http://elpa.gnu.org/packages/wcheck-mode-2016.1.30.el]]     |
+| [[http://elpa.gnu.org/packages/w3-4.0.49.tar]]                |
+| [[http://elpa.gnu.org/packages/vlf-1.7.tar]]                  |
+| [[http://elpa.gnu.org/packages/url-http-ntlm-2.0.2.el]]       |
+| [[http://elpa.gnu.org/packages/uni-confusables-0.1.tar]]      |
+| [[http://elpa.gnu.org/packages/undo-tree-0.6.5.el]]           |
+| [[http://elpa.gnu.org/packages/trie-0.2.6.el]]                |
+| [[http://elpa.gnu.org/packages/transcribe-1.5.0.el]]          |
+| [[http://elpa.gnu.org/packages/tramp-theme-0.1.1.el]]         |
+| [[http://elpa.gnu.org/packages/tiny-0.1.1.tar]]               |
+| [[http://elpa.gnu.org/packages/timerfunctions-1.4.2.el]]      |
+| [[http://elpa.gnu.org/packages/test-simple-1.2.0.el]]         |
+| [[http://elpa.gnu.org/packages/temp-buffer-browse-1.4.el]]    |
+| [[http://elpa.gnu.org/packages/tNFA-0.1.1.el]]                |
+| [[http://elpa.gnu.org/packages/svg-clock-1.0.el]]             |
+| [[http://elpa.gnu.org/packages/svg-0.1.el]]                   |
+| [[http://elpa.gnu.org/packages/stream-2.2.0.el]]              |
+| [[http://elpa.gnu.org/packages/spinner-1.7.1.el]]             |
+| [[http://elpa.gnu.org/packages/sotlisp-1.5.2.el]]             |
+| [[http://elpa.gnu.org/packages/sokoban-1.4.tar]]              |
+| [[http://elpa.gnu.org/packages/soap-client-3.1.1.tar]]        |
+| [[http://elpa.gnu.org/packages/sml-mode-6.7.el]]              |
+| [[http://elpa.gnu.org/packages/sisu-mode-7.1.8.el]]           |
+| [[http://elpa.gnu.org/packages/shen-mode-0.1.tar]]            |
+| [[http://elpa.gnu.org/packages/seq-2.15.tar]]                 |
+| [[http://elpa.gnu.org/packages/sed-mode-1.0.el]]              |
+| [[http://elpa.gnu.org/packages/scroll-restore-1.0.el]]        |
+| [[http://elpa.gnu.org/packages/rudel-0.3.tar]]                |
+| [[http://elpa.gnu.org/packages/rnc-mode-0.1.el]]              |
+| [[http://elpa.gnu.org/packages/rich-minority-1.0.1.el]]       |
+| [[http://elpa.gnu.org/packages/register-list-0.1.el]]         |
+| [[http://elpa.gnu.org/packages/rainbow-mode-0.12.el]]         |
+| [[http://elpa.gnu.org/packages/queue-0.1.1.el]]               |
+| [[http://elpa.gnu.org/packages/quarter-plane-0.1.el]]         |
+| [[http://elpa.gnu.org/packages/python-0.25.1.el]]             |
+| [[http://elpa.gnu.org/packages/poker-0.1.el]]                 |
+| [[http://elpa.gnu.org/packages/pinentry-0.1.el]]              |
+| [[http://elpa.gnu.org/packages/pabbrev-4.2.1.el]]             |
+| [[http://elpa.gnu.org/packages/other-frame-window-1.0.2.el]]  |
+| [[http://elpa.gnu.org/packages/osc-0.1.el]]                   |
+| [[http://elpa.gnu.org/packages/org-20160502.tar]]             |
+| [[http://elpa.gnu.org/packages/on-screen-1.3.2.el]]           |
+| [[http://elpa.gnu.org/packages/omn-mode-1.2.el]]              |
+| [[http://elpa.gnu.org/packages/oauth2-0.10.el]]               |
+| [[http://elpa.gnu.org/packages/num3-mode-1.2.el]]             |
+| [[http://elpa.gnu.org/packages/ntlm-2.0.0.el]]                |
+| [[http://elpa.gnu.org/packages/notes-mode-1.30.tar]]          |
+| [[http://elpa.gnu.org/packages/nlinum-1.6.el]]                |
+| [[http://elpa.gnu.org/packages/nhexl-mode-0.1.el]]            |
+| [[http://elpa.gnu.org/packages/names-20151201.0.tar]]         |
+| [[http://elpa.gnu.org/packages/nameless-1.0.1.el]]            |
+| [[http://elpa.gnu.org/packages/muse-3.20.tar]]                |
+| [[http://elpa.gnu.org/packages/multishell-1.1.5.tar]]         |
+| [[http://elpa.gnu.org/packages/minimap-1.2.el]]               |
+| [[http://elpa.gnu.org/packages/minibuffer-line-0.1.el]]       |
+| [[http://elpa.gnu.org/packages/midi-kbd-0.2.el]]              |
+| [[http://elpa.gnu.org/packages/metar-0.2.el]]                 |
+| [[http://elpa.gnu.org/packages/memory-usage-0.2.el]]          |
+| [[http://elpa.gnu.org/packages/math-symbol-lists-1.1.tar]]    |
+| [[http://elpa.gnu.org/packages/markchars-0.2.0.el]]           |
+| [[http://elpa.gnu.org/packages/loccur-1.2.2.el]]              |
+| [[http://elpa.gnu.org/packages/loc-changes-1.2.el]]           |
+| [[http://elpa.gnu.org/packages/load-relative-1.2.el]]         |
+| [[http://elpa.gnu.org/packages/load-dir-0.0.3.el]]            |
+| [[http://elpa.gnu.org/packages/lmc-1.3.el]]                   |
+| [[http://elpa.gnu.org/packages/lex-1.1.tar]]                  |
+| [[http://elpa.gnu.org/packages/let-alist-1.0.4.el]]           |
+| [[http://elpa.gnu.org/packages/landmark-1.0.el]]              |
+| [[http://elpa.gnu.org/packages/jumpc-3.0.el]]                 |
+| [[http://elpa.gnu.org/packages/js2-mode-20150909.tar]]        |
+| [[http://elpa.gnu.org/packages/jgraph-mode-1.1.el]]           |
+| [[http://elpa.gnu.org/packages/javaimp-0.6.el]]               |
+| [[http://elpa.gnu.org/packages/ivy-0.8.0.tar]]                |
+| [[http://elpa.gnu.org/packages/iterators-0.1.el]]             |
+| [[http://elpa.gnu.org/packages/ioccur-2.4.el]]                |
+| [[http://elpa.gnu.org/packages/hydra-0.13.5.tar]]             |
+| [[http://elpa.gnu.org/packages/html5-schema-0.1.tar]]         |
+| [[http://elpa.gnu.org/packages/heap-0.3.el]]                  |
+| [[http://elpa.gnu.org/packages/gnugo-3.0.0.tar]]              |
+| [[http://elpa.gnu.org/packages/gnorb-1.1.2.tar]]              |
+| [[http://elpa.gnu.org/packages/gnome-c-style-0.1.tar]]        |
+| [[http://elpa.gnu.org/packages/ggtags-0.8.11.el]]             |
+| [[http://elpa.gnu.org/packages/fsm-0.2.el]]                   |
+| [[http://elpa.gnu.org/packages/flylisp-0.2.el]]               |
+| [[http://elpa.gnu.org/packages/f90-interface-browser-1.1.el]] |
+| [[http://elpa.gnu.org/packages/exwm-0.4.tar]]                 |
+| [[http://elpa.gnu.org/packages/excorporate-0.7.3.tar]]        |
+| [[http://elpa.gnu.org/packages/ergoemacs-mode-5.14.7.3.tar]]  |
+| [[http://elpa.gnu.org/packages/epoch-view-0.0.1.el]]          |
+| [[http://elpa.gnu.org/packages/enwc-1.0.tar]]                 |
+| [[http://elpa.gnu.org/packages/electric-spacing-5.0.el]]      |
+| [[http://elpa.gnu.org/packages/eldoc-eval-0.1.el]]            |
+| [[http://elpa.gnu.org/packages/el-search-0.1.3.el]]           |
+| [[http://elpa.gnu.org/packages/ediprolog-1.1.el]]             |
+| [[http://elpa.gnu.org/packages/easy-kill-0.9.3.tar]]          |
+| [[http://elpa.gnu.org/packages/dts-mode-0.1.0.el]]            |
+| [[http://elpa.gnu.org/packages/docbook-0.1.el]]               |
+| [[http://elpa.gnu.org/packages/djvu-0.5.el]]                  |
+| [[http://elpa.gnu.org/packages/dismal-1.5.tar]]               |
+| [[http://elpa.gnu.org/packages/diff-hl-1.8.3.tar]]            |
+| [[http://elpa.gnu.org/packages/dict-tree-0.12.8.el]]          |
+| [[http://elpa.gnu.org/packages/debbugs-0.9.5.tar]]            |
+| [[http://elpa.gnu.org/packages/dbus-codegen-0.1.el]]          |
+| [[http://elpa.gnu.org/packages/dash-2.12.0.tar]]              |
+| [[http://elpa.gnu.org/packages/darkroom-0.1.el]]              |
+| [[http://elpa.gnu.org/packages/csv-mode-1.6.el]]              |
+| [[http://elpa.gnu.org/packages/crisp-1.3.4.el]]               |
+| [[http://elpa.gnu.org/packages/context-coloring-7.2.1.el]]    |
+| [[http://elpa.gnu.org/packages/company-statistics-0.2.2.tar]] |
+| [[http://elpa.gnu.org/packages/company-math-1.1.tar]]         |
+| [[http://elpa.gnu.org/packages/company-0.8.12.tar]]           |
+| [[http://elpa.gnu.org/packages/coffee-mode-0.4.1.1.el]]       |
+| [[http://elpa.gnu.org/packages/cl-lib-0.5.el]]                |
+| [[http://elpa.gnu.org/packages/cl-generic-0.2.el]]            |
+| [[http://elpa.gnu.org/packages/chess-2.0.4.tar]]              |
+| [[http://elpa.gnu.org/packages/caps-lock-1.0.el]]             |
+| [[http://elpa.gnu.org/packages/bug-hunter-1.3.1.el]]          |
+| [[http://elpa.gnu.org/packages/beacon-1.3.0.el]]              |
+| [[http://elpa.gnu.org/packages/avy-0.4.0.tar]]                |
+| [[http://elpa.gnu.org/packages/auto-overlays-0.10.9.tar]]     |
+| [[http://elpa.gnu.org/packages/aumix-mode-7.el]]              |
+| [[http://elpa.gnu.org/packages/auctex-11.89.3.tar]]           |
+| [[http://elpa.gnu.org/packages/async-1.6.tar]]                |
+| [[http://elpa.gnu.org/packages/ascii-art-to-unicode-1.9.el]]  |
+| [[http://elpa.gnu.org/packages/arbitools-0.70.el]]            |
+| [[http://elpa.gnu.org/packages/ampc-0.2.el]]                  |
+| [[http://elpa.gnu.org/packages/all-1.0.el]]                   |
+| [[http://elpa.gnu.org/packages/ahungry-theme-1.1.0.tar]]      |
+| [[http://elpa.gnu.org/packages/aggressive-indent-1.7.el]]     |
+| [[http://elpa.gnu.org/packages/adjust-parens-3.0.tar]]        |
+| [[http://elpa.gnu.org/packages/adaptive-wrap-0.5.el]]         |
+| [[http://elpa.gnu.org/packages/ada-ref-man-2012.0.tar]]       |
+| [[http://elpa.gnu.org/packages/ada-mode-5.1.9.tar]]           |
+| [[http://elpa.gnu.org/packages/ack-1.5.tar]]                  |
+| [[http://elpa.gnu.org/packages/ace-window-0.9.0.el]]          |
+
+- 下载 =archive-contents=
+
+#+BEGIN_SRC shell :dir /tmp/elpa :exports output
+cp -v $TMPDIR/elpa/archives/gnu/archive-contents .
+#+END_SRC
+
+#+RESULTS:
+: /var/folders/50/hxvm95r941s0v977bj7cnl0c0000gn/T//elpa/archives/gnu/archive-contents -> ./archive-contents
+
+- 设置 Emacs 使用这个镜像
+
+#+BEGIN_SRC emacs-lisp
+  (require 'package)
+  (setq package-archives '(("local" . "/tmp/elpa/")))
+
+  (package-refresh-contents)
+  (package-initialize)
+#+END_SRC
