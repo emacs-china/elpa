@@ -5,8 +5,11 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_4a4256e4572b_key -iv $encrypted_4a4256e4572b_iv -in .deploy_key.enc -out ~/.ssh/id_rsa -d
   - chmod 0600 ~/.ssh/id_rsa
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  # Test accessing VPS
-  - rsync -av ./ $DEPLOY_USER@$DEPLOY_HOST:/tmp/emacs-china-elpa
+
+script:
+  - time ./download
+  - ls packages ; du -sh packages
+  - time rsync -av -W --delete packages/ $DEPLOY_USER@$DEPLOY_HOST:/var/elpa-packages
 
 env:
   global:
