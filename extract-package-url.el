@@ -2,17 +2,34 @@
 
 ;; Copyright (C) 2016  Chunyang Xu
 ;;
+;; Package-Requires: ((emacs "24.4"))
+;;
 ;; License: GPLv3
 
 ;;; Commentary:
 ;;
-;; Usage: emacs -Q --batch -l extract-package-url.el
+;; Usage: elpa=the-name-of-elpa emacs -Q --batch -l extract-package-url.el
 
 ;;; Code:
 
 (require 'package)
 
-(setq package-user-dir (expand-file-name "elpa" temporary-file-directory))
+(defvar extract-package-url-source-mapping
+  '((gnu          . "http://elpa.gnu.org/packages/")
+    (melpa        . "http://melpa.org/packages/")
+    (melpa-stable . "http://stable.melpa.org/packages/")
+    (marmalade    . "http://marmalade-repo.org/packages/")
+    (SC           . "http://joseito.republika.pl/sunrise-commander/")
+    (org          . "http://orgmode.org/elpa/"))
+  "Mapping of source name and url.")
+
+(let* ((name (getenv "elpa"))
+       (url
+        (and name
+             (cdr (assq (intern name) extract-package-url-source-mapping)))))
+  (if url
+      (setq package-archives (list (cons name url)))
+    (error "Environment variable 'elpa' not set or incorrect")))
 
 (package-refresh-contents)
 
