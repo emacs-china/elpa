@@ -14,6 +14,7 @@ before_install:
   - sudo apt-get install aria2
 
 script:
+  - emacs --version
   - time ./download
   - ls packages ; du -sh packages
   - time rsync -av -W --delete packages/ $DEPLOY_USER@$DEPLOY_HOST:/var/elpa-packages

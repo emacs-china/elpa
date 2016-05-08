@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 elpa_names=(gnu org melpa melpa-stable marmalade SC)
 
 # Build packages download URLs
