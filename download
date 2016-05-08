@@ -1,0 +1,21 @@
+#!/bin/bash
+
+elpa_names=(gnu org melpa melpa-stable marmalade SC)
+
+# Build packages download URLs
+for i in "${elpa_names[@]}"; do
+    elpa="$i" emacs -Q --batch -l extract-package-url.el > "$i"-urls
+done
+
+mkdir -p packages; cd packages
+
+# Migrate archive-contents
+for i in "${elpa_names[@]}"; do
+    mkdir -p "$i"
+    cp -v ~/.emacs.d/elpa/archives/"$i"/archive-contents "$i"/
+done
+
+# Download packages
+for i in "${elpa_names[@]}"; do
+    (cd "$i"; aria2c --check-certificate=false -i ../../"$i"-urls)
+done
