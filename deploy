@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ssh $DEPLOY_USER@$DEPLOY_HOST "mkdir -p /var/elpa-packages/"
+ssh $DEPLOY_USER@$DEPLOY_HOST "mkdir -p /var/elpa/"
+
+time rsync -av -W --delete $elpa/ $DEPLOY_USER@$DEPLOY_HOST:/var/elpa-packages/$elpa
+
+ssh $DEPLOY_USER@$DEPLOY_HOST "rsync -av /var/elpa-packages/$elpa/ /var/elpa/$elpa"
+ssh $DEPLOY_USER@$DEPLOY_HOST "rsync -av --delete /var/elpa-packages/$elpa/ /var/elpa/$elpa"

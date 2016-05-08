@@ -2,8 +2,6 @@
 
 ;; Copyright (C) 2016  Chunyang Xu
 ;;
-;; Package-Requires: ((emacs "24.4"))
-;;
 ;; License: GPLv3
 
 ;;; Commentary:
@@ -11,8 +9,6 @@
 ;; Usage: elpa=the-name-of-elpa emacs -Q --batch -l extract-package-url.el
 
 ;;; Code:
-
-(require 'package)
 
 (defvar extract-package-url-source-mapping
   '((gnu          . "http://elpa.gnu.org/packages/")
@@ -27,17 +23,19 @@
        (url
         (and name
              (cdr (assq (intern name) extract-package-url-source-mapping)))))
-  (if url
-      (setq package-archives (list (cons name url)))
-    (error "Environment variable 'elpa' not set or incorrect")))
-
-(package-refresh-contents)
-
-(dolist (elt package-archive-contents)
-  (let* ((pkg-desc (cadr elt))
-         (location (package-archive-base pkg-desc))
-         (file (concat (package-desc-full-name pkg-desc)
-                       (package-desc-suffix pkg-desc))))
-    (princ (format "%s%s\n" location file))))
+  (unless url (error "Environment variable 'elpa' not set or incorrect"))
+  (let ((ac-url (concat url "archive-contents"))
+        (ac-file (expand-file-name "archive-contents" name)))
+    (url-copy-file ac-url ac-file t)
+    (with-temp-buffer
+      (insert-file-contents ac-file)
+      (dolist (pkg (cdr (read (buffer-string))))
+        (let ((pkg-name (car pkg))
+              (pkg-version (mapconcat #'number-to-string
+                                      (aref (cdr pkg) 0)
+                                      "."))
+              (pkg-type (if (eq 'tar (aref (cdr pkg) 3))
+                            "tar" "el")))
+          (princ (format "%s%s-%s.%s\n" url pkg-name pkg-version pkg-type)))))))
 
 ;;; extract-package-url.el ends here

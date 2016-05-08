@@ -1,23 +1,25 @@
 sudo: true
-language: generic
+language: general
 
 before_install:
   - openssl aes-256-cbc -K $encrypted_4a4256e4572b_key -iv $encrypted_4a4256e4572b_iv -in .deploy_key.enc -out ~/.ssh/id_rsa -d
   - chmod 0600 ~/.ssh/id_rsa
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - sudo add-apt-repository -y ppa:ubuntu-elisp
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq $emacs
-  - sudo apt-get install aria2
+  - sudo apt-get install aria2 -qq
 
 script:
-  - emacs --version
   - time ./download
-  - ls packages ; du -sh packages
-  - time rsync -av -W --delete packages/ $DEPLOY_USER@$DEPLOY_HOST:/var/elpa-packages
+  - ls ; du -sh .
+  - time ./deploy
 
 env:
   global:
   - secure: o2GyLB03+uKRfra3kx0TNC6w+ebs6TI6tepl5TkTaIC9d3DY7bcNlGW8JlPB5f/nA0A4HnaAWqGaCY0LKjemy1qynjVTI+1hupV3rY+Vu/Beu+YTEW0XZb3jgxCD0e2jeI20kzh3ntr5tVULz2h1UtsTSwEjrOYIOncZ+6zWRdhu8XQyU27gPD6ai0oyWQzJw5mlPpnaRZ7UC0GSRMXO3Dla7e+fkdKTfzILLBAj7Gqn0Q1W+BOk3yFeFwkwYqJTmJV3g1V1aQy9urBodQ82ttOPwge1+mKhfNcp9ZS/YEBb3gEwAWtF3mp+CyCgNxPnvfhvFqyGPHrYf/0FIMZyioATJW6G5poI3/E3v7/jqQSw8AkgKz09C/GDZWroLyfGyKg7R8kcSf4vbMXQc1wdOnRI/1v6tf0kA3z2sdJfxw7OkpdDbSekrXHce16UANeg6Vl6oDsz6SO0ab1CP+uE/BWgigRGyN00MGaROspDuEyOkL80ppJ0q4VhN3p1NSHngpDo/xv9LJGXZaIk2ElUAd+g1knXyIJRhrfxItRiAcf3McURUvFiJqsSDRbmjJhp6yZnzp+mJFhRkMSmmAauirHg9fwR7T43zzl3F/s59ld0BOcllMdogQTCejo76TOPFysYBhosKDd/CoVD9mFpTmJWp2p0ReJt/8U5IXKeafk=
   - secure: PElm6lmjPT5w5trMZwXQMrscUiTFdgQdcC5JyNc5UlJqA2+zETP5DGBgMQhyHDD4Vw9vpmdzNRHCoD5Nz5bYoaLjYOSd90AD7Oe19o7rPP/pWxiCWFGKqPiu+y8zbEarQ39vIi17DdfBeTTiCyBmP36FWRsSEg0stJCsTnRE7p9imw1Vwje/eYwknb8vCSMUwGTDaUK1diRbHvoJx3szTIHJ0iUygg9ww1vVdZLqggjs/TMRd5PZKlBl/B4KvFgCtZSOb6pQLA2Th//pY5pof+NGYQs8j8W//ABiX3i0eBzzybQNRiB3dBxtX/C2gGFvm+x10062osQUuDOeXebWA68njD0RGC4GxZZNGJTzgl8L5Fo5nEzA7Lc1wlzMwtu1pW2wSxGBDn6EmKsWTkC0/1eCMBZE2uMpMPtxoAL40BHXiQrAg4DxIsFD2Xqm58ZeRTJzJnN43KVYKlkBCb/kURLLQQ9rLM/iRvkXsKEocCnidtRMWnz4uByiGEQpb/SUb5mbgPerp+PJ3PkPWjkmYvWOZQfPeJBHtkp5ZIqphb1BCRea6Ji/gaYb+LtbD39isx6IQnpis0QQInZ1e3f8SPzdIsOftB2QjihxzbmMXNpA03r3Be0TXJ7urYgGWX+HxbbG+Atrgu+FClnu0lsY6436lyP/Xaim2uam8C60a/E=
-  - emacs=emacs-snapshot
+  matrix:
+    - elpa=gnu
+    - elpa=melpa
+    - elpa=melpa-stable
+    - elpa=marmalade
+    - elpa=org
+    - elpa=SC
