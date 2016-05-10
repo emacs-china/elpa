@@ -27,6 +27,7 @@
   (let ((ac-url (concat url "archive-contents"))
         (ac-file (expand-file-name "archive-contents" name)))
     (url-copy-file ac-url ac-file t)
+    (shell-command (concat "chmod a+r " ac-file))
     (with-temp-buffer
       (insert-file-contents ac-file)
       (dolist (pkg (cdr (read (buffer-string))))
