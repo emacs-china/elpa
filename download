@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 export elpa="${elpa:=gnu}"
 
 mkdir -p $elpa

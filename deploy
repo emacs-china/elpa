@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 ssh $DEPLOY_USER@$DEPLOY_HOST "mkdir -p /var/elpa-packages/"
 ssh $DEPLOY_USER@$DEPLOY_HOST "mkdir -p /var/elpa/"
 
