@@ -43,6 +43,7 @@
                 (pkg-type (if (eq 'tar (aref (cdr pkg) 3))
                               "tar" "el")))
             (princ (format "%s%s-%s.%s\n" url pkg-name pkg-version pkg-type))
+            (princ (format "%s%s-readme.txt\n" url pkg-name))
             ;; Download signature file for GNU ELPA
             (when (string-equal "gnu" name)
               (princ (format "%s%s-%s.%s.sig\n" url pkg-name pkg-version pkg-type)))))))))
