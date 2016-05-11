@@ -1,6 +1,11 @@
 sudo: true
 language: general
 
+branches:
+  only:
+    - master
+    - commit-for-travis-ci
+
 before_install:
   - openssl aes-256-cbc -K $encrypted_4a4256e4572b_key -iv $encrypted_4a4256e4572b_iv -in .deploy_key.enc -out ~/.ssh/id_rsa -d
   - chmod 0600 ~/.ssh/id_rsa
