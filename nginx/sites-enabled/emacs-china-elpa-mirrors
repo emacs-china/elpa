@@ -27,6 +27,10 @@ server {
 	# Make site accessible from http://localhost/
 	server_name elpa.zilongshanren.com;
 
+        # individual nginx logs for this emacs-china-elpa vhost
+        access_log  /var/log/nginx/emacs-china-elpa/access.log;
+        error_log   /var/log/nginx/emacs-china-elpa/error.log;
+
 	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to index.html
