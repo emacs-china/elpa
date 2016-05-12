@@ -33,6 +33,7 @@ server {
 		### try_files $uri $uri/ /index.html;
 		# Uncomment to enable naxsi on this location
 		# include /etc/nginx/naxsi.rules
+		autoindex on;
 	}
 
 	# Only for nginx-naxsi : process denied requests
