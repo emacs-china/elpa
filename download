@@ -11,3 +11,5 @@ emacs -Q --batch -l extract-package-url.el > "$elpa"-urls
 cd $elpa
 
 aria2c --check-certificate=false -i ../"$elpa"-urls || [ "$?" = "3" ]
+
+cd ..

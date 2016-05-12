@@ -13,8 +13,6 @@ before_install:
   - sudo apt-get install aria2 -qq
 
 script:
-  - time ./download
-  - ls ; du -sh .
   - time ./deploy
 
 env:
