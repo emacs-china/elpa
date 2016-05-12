@@ -26,3 +26,9 @@ env:
     - elpa=marmalade
     - elpa=org
     - elpa=SC
+
+notifications:
+  email:
+    recipients:
+      - xuchunyang.me@gmail.com
+    on_failure: always
