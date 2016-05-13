@@ -1,5 +1,6 @@
-sudo: true
 language: general
+sudo: required
+dist: trusty
 
 branches:
   only:
@@ -11,8 +12,10 @@ before_install:
   - chmod 0600 ~/.ssh/id_rsa
   - echo -e "Host *\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - sudo apt-get install aria2 -qq
+  - sudo apt-get install -qq emacs24-nox
 
 script:
+  - emacs --version
   - time ./deploy
 
 env:

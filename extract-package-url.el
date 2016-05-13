@@ -2,6 +2,8 @@
 
 ;; Copyright (C) 2016  Chunyang Xu
 ;;
+;; Package-Requires: ((emacs "24.1"))
+;;
 ;; License: GPLv3
 
 ;;; Commentary:
@@ -9,6 +11,8 @@
 ;; Usage: elpa=the-name-of-elpa emacs -Q --batch -l extract-package-url.el
 
 ;;; Code:
+
+(require 'package)
 
 (defvar extract-package-url-source-mapping
   '((gnu          . "http://elpa.gnu.org/packages/")
@@ -37,9 +41,7 @@
         (insert-file-contents ac-file)
         (dolist (pkg (cdr (read (buffer-string))))
           (let ((pkg-name (car pkg))
-                (pkg-version (mapconcat #'number-to-string
-                                        (aref (cdr pkg) 0)
-                                        "."))
+                (pkg-version (package-version-join (aref (cdr pkg) 0)))
                 (pkg-type (if (eq 'tar (aref (cdr pkg) 3))
                               "tar" "el")))
             (princ (format "%s%s-%s.%s\n" url pkg-name pkg-version pkg-type))
