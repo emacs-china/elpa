@@ -40,6 +40,15 @@ server {
 		autoindex on;
 	}
 
+	location ~ ^/.*/archive-contents {
+		 default_type text/plain;
+	}
+
+	location ~ ^/.*/.*\.el {
+		 default_type text/plain;
+	}
+
+
 	# Only for nginx-naxsi : process denied requests
 	#location /RequestDenied {
 		# For example, return an error code
