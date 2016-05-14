@@ -9,7 +9,8 @@ du -sh .
 ssh $DEPLOY_USER@$DEPLOY_HOST "mkdir -p /var/elpa-packages/"
 ssh $DEPLOY_USER@$DEPLOY_HOST "mkdir -p /var/elpa/"
 
-time rsync -avz --delete $elpa/ $DEPLOY_USER@$DEPLOY_HOST:/var/elpa-packages/$elpa
+rsync -avz --delete $elpa/ $DEPLOY_USER@$DEPLOY_HOST:/var/elpa-packages/$elpa ||
+    sleep 30; rsync -av --delete $elpa/ $DEPLOY_USER@$DEPLOY_HOST:/var/elpa-packages/$elpa
 
 ssh $DEPLOY_USER@$DEPLOY_HOST "rsync -av /var/elpa-packages/$elpa/ /var/elpa/$elpa"
 ssh $DEPLOY_USER@$DEPLOY_HOST "rsync -av --delete /var/elpa-packages/$elpa/ /var/elpa/$elpa"
