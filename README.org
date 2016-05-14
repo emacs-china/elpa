@@ -1,2 +1,2 @@
-* Emacs China ELPA mirrors
+* Emacs China ELPA 镜像
 [[https://travis-ci.org/emacs-china/elpa][file:https://api.travis-ci.org/emacs-china/elpa.svg]]
