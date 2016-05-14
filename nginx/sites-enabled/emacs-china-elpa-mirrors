@@ -24,6 +24,8 @@ server {
 	root /var/elpa;
 	# index index.html index.htm;
 
+	charset utf-8;
+
 	# Make site accessible from http://localhost/
 	server_name elpa.zilongshanren.com;
 
