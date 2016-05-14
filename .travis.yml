@@ -28,7 +28,8 @@ env:
     - elpa=melpa-stable
     - elpa=marmalade
     - elpa=org
-    - elpa=SC
+    # Disable since the upstream is not accessible sometime
+    # - elpa=SC
 
 notifications:
   email:
