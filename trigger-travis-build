@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Run this script to trigger a Travis-CI build
+#
+# Usage: TRAVIS_TOKEN=your_token ./trigger-travis-build
+#
+# API documentation: https://docs.travis-ci.com/user/triggering-builds
+
+# In case curl doesn't in cron's PATH
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+if [ -z "$TRAVIS_TOKEN" ]; then
+    echo "Error: Environment variable TRAVIS_TOKEN is not set"
+    exit 1
+fi
+
+body='{
+"request": {
+  "message": "This build is triggered by an api request",
+  "branch":"master"
+}}'
+
+curl -s -X POST \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Travis-API-Version: 3" \
+  -H "Authorization: token $TRAVIS_TOKEN" \
+  -d "$body" \
+  https://api.travis-ci.org/repo/emacs-china%2Felpa/requests
