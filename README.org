@@ -1,2 +1,5 @@
 * Emacs China ELPA 镜像
+
+更多信息请参考其[[http://elpa.emacs-china.org/][主页]]
+
 [[https://travis-ci.org/emacs-china/elpa][file:https://api.travis-ci.org/emacs-china/elpa.svg]]
