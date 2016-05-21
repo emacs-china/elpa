@@ -1,5 +1,44 @@
-* Emacs China ELPA 镜像
+#+TITLE: ELPA 镜像 - Emacs China
 
-更多信息请参考其[[http://elpa.emacs-china.org/][主页]]
+/注：本镜像处于[[https://github.com/emacs-china/elpa/issues/20][测试阶段]]/
 
-[[https://travis-ci.org/emacs-china/elpa][file:https://api.travis-ci.org/emacs-china/elpa.svg]]
+| ELPA              | 镜像地址                                    |
+|-------------------+---------------------------------------------|
+| [[http://elpa.gnu.org/][GNU ELPA]]          | http://elpa.zilongshanren.com/gnu/          |
+| [[https://melpa.org/][MELPA]]             | http://elpa.zilongshanren.com/melpa/        |
+| [[http://stable.melpa.org/#/][MELPA Stable]]      | http://elpa.zilongshanren.com/melpa-stable/ |
+| [[Https://marmalade-repo.org/][Marmalade]]         | http://elpa.zilongshanren.com/marmalade/    |
+| [[http://orgmode.org/elpa.html][Org]]               | http://elpa.zilongshanren.com/org/          |
+
+** 使用方法
+
+根据你的需求，设置 ~package-archives~ ，比如用 GNU ELPA 和 MELPA：
+
+#+BEGIN_SRC emacs-lisp
+  (setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
+                           ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
+#+END_SRC
+
+** 镜像说明
+
+每四小时[[https://travis-ci.org/emacs-china/elpa/builds][更新]]一次。
+
+由于 =emacs-china.org= 没有备案，我们用了[[http://zilongshanren.com/][子龙山人]]提供的子域名。即使将来 \\
+=emacs-china.org= 备案了， =elpa.zilongshanren.com= 也会继续工作。
+
+** 报告问题
+
+https://github.com/emacs-china/elpa/issues
+
+
+** 致谢
+
+[[http://zilongshanren.com/][子龙山人]] 提供域名和 VPS
+
+[[https://travis-ci.org/][Travis CI]] 同步的工作在它上面完成，使得我们不用购买一台国外的 VPS
+
+[[https://github.com/li-xinyang][li-xinyang (Li Xinyang)]] 设计这个页面
+
+[[https://github.com/qinshulei][qinshulei (Qin Shulei)]] 改进这个页面
+
+[[https://github.com/xuchunyang/][xuchunyang (Chunyang Xu)]] 目前负责镜像的维护工作
