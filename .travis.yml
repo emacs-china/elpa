@@ -15,7 +15,7 @@ before_install:
 
 script:
   - emacs --version
-  - time ./deploy
+  - ./download && ls ; du -sh ; travis_retry ./deploy
 
 env:
   global:
