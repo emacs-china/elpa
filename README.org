@@ -19,6 +19,17 @@
                            ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
 #+END_SRC
 
+*** Spacemacs 用户
+
+添加下面的代码到 ~.spacemacs~ 的 ~dotspacemacs/user-init()~  
+
+#+BEGIN_SRC emacs-lisp
+  (setq configuration-layer--elpa-archives'(
+      ("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
+      ("org-cn" . "http://elpa.zilongshanren.com/org/")
+      ("gnu-cn" . "http://elpa.zilongshanren.com/gnu/")))
+#+END_SRC
+
 ** 镜像说明
 
 每四小时[[https://travis-ci.org/emacs-china/elpa/builds][更新]]一次。
