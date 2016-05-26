@@ -30,6 +30,15 @@
         ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
 #+END_SRC
 
+*** Cask 用户
+
+[[https://github.com/cask/cask][Cask]] 是一个 Emacs Lisp 的项目管理工具。这里还是以 GNU ELPA 和 MELPA 为例，在添加下面的代码到 ~Cask~
+
+#+BEGIN_SRC emacs-lisp
+  (source "gnu"   "http://elpa.zilongshanren.com/gnu/")
+  (source "melpa" "http://elpa.zilongshanren.com/melpa/")
+#+END_SRC
+
 ** 镜像说明
 
 每四小时[[https://travis-ci.org/emacs-china/elpa/builds][更新]]一次。
