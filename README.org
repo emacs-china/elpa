@@ -21,7 +21,7 @@
 
 *** Spacemacs 用户
 
-添加下面的代码到 ~.spacemacs~ 的 ~dotspacemacs/user-init()~  
+添加下面的代码到 ~.spacemacs~ 的 ~dotspacemacs/user-init()~
 
 #+BEGIN_SRC emacs-lisp
   (setq configuration-layer--elpa-archives
