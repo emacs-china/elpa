@@ -41,7 +41,7 @@
 
 ** 镜像说明
 
-每四小时[[https://travis-ci.org/emacs-china/elpa/builds][更新]]一次。
+每四小时更新 [[https://travis-ci.org/emacs-china/elpa][file:https://travis-ci.org/emacs-china/elpa.svg?branch=master]] 一次。
 
 由于 =emacs-china.org= 没有备案，我们用了[[http://zilongshanren.com/][子龙山人]]提供的子域名。即使将来 \\
 =emacs-china.org= 备案了， =elpa.zilongshanren.com= 也会继续工作。
@@ -57,8 +57,6 @@ https://github.com/emacs-china/elpa/issues
 
 [[https://travis-ci.org/][Travis CI]] 同步的工作在它上面完成，使得我们不用购买一台国外的 VPS
 
-[[https://github.com/li-xinyang][li-xinyang (Li Xinyang)]] 设计这个页面
+[[https://github.com/li-xinyang][li-xinyang (Li Xinyang)]] 设计 http://elpa.emacs-china.org/ 这个页面
 
-[[https://github.com/qinshulei][qinshulei (Qin Shulei)]] 改进这个页面
-
-[[https://github.com/xuchunyang/][xuchunyang (Chunyang Xu)]] 目前负责镜像的维护工作
+[[https://github.com/qinshulei][qinshulei (Qin Shulei)]] 改进 http://elpa.emacs-china.org/ 这个页面
