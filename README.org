@@ -46,6 +46,26 @@
 由于 =emacs-china.org= 没有备案，我们用了[[http://zilongshanren.com/][子龙山人]]提供的子域名。即使将来 \\
 =emacs-china.org= 备案了， =elpa.zilongshanren.com= 也会继续工作。
 
+** 制作新的镜像
+
+上游的 ELPA 目前都还没有提供制作镜像的方法，如果你也需要制作镜像，可以直接同步本镜像，rsync 地址为
+
+#+BEGIN_EXAMPLE
+  rsync://elpa.zilongshanren.com/elpa/
+#+END_EXAMPLE
+
+本镜像目前（2016-06-03）收录了的 5 个 常见的 ELPA，共占 536M
+
+#+BEGIN_EXAMPLE
+536M      /elpa
+          
+50M       /elpa/gnu
+282M      /elpa/melpa
+129M      /elpa/melpa-stable
+63M       /elpa/marmalade
+13M       /elpa/org
+#+END_EXAMPLE
+
 ** 报告问题
 
 https://github.com/emacs-china/elpa/issues
