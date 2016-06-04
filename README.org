@@ -2,6 +2,8 @@
 
 /注：本镜像处于[[https://github.com/emacs-china/elpa/issues/20][测试阶段]]/
 
+/注：本镜像搭建在 [[https://github.com/zilongshanren][@zilongshanren]] 的 VPS 上，带宽有限，可以考虑使用 [[https://mirrors.tuna.tsinghua.edu.cn/help/elpa/][清华大学 TUNA 镜像源的 ELPA 镜像]]/
+
 | ELPA              | 镜像地址                                    |
 |-------------------+---------------------------------------------|
 | [[http://elpa.gnu.org/][GNU ELPA]]          | http://elpa.zilongshanren.com/gnu/          |
