@@ -1,0 +1,21 @@
+#!/bin/bash -e
+
+# 精确的下载量 https://elpa.zilongshanren.com/downloads
+# Badge https://elpa.zilongshanren.com/downloads-badge.svg
+
+# 利用 Cron 每天更新一次
+
+cd /tmp
+
+cp -v /var/log/nginx/emacs-china-elpa/access.log elpa-access.log
+
+downloads=$( grep 'URL/Emacs' elpa-access.log | grep -E 'GET /[^ ]*.(tar|el) ' -c )
+
+echo -n $downloads > downloads
+
+downloads_hunman_readable=$( numfmt --to=si $downloads )
+
+wget "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20totals-green.svg" -O downloads-badge.svg
+
+cp -v downloads /var/elpa
+cp -v downloads-badge.svg /var/elpa
