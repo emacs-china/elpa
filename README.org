@@ -43,6 +43,8 @@
 
 每八小时更新 [[https://travis-ci.org/emacs-china/elpa][file:https://travis-ci.org/emacs-china/elpa.svg?branch=master]] 一次。
 
+支持 HTTPS，只需要把 =elpa.zilongshanren.com= 的 http 前缀修改成 https 即可。
+
 由于 =emacs-china.org= 没有备案，我们用了[[http://zilongshanren.com/][子龙山人]]提供的子域名。即使将来 \\
 =emacs-china.org= 备案了， =elpa.zilongshanren.com= 也会继续工作。
 
