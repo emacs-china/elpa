@@ -1,6 +1,6 @@
 #+TITLE: ELPA 镜像 - Emacs China
 
-[[https://travis-ci.org/emacs-china/elpa][file:https://travis-ci.org/emacs-china/elpa.svg?branch=master]] [[file:https://elpa.zilongshanren.com/downloads-badge.svg]]
+[[https://travis-ci.org/emacs-china/elpa][file:https://travis-ci.org/emacs-china/elpa.svg?branch=master]] [[https://elpa.zilongshanren.com/downloads][file:https://elpa.zilongshanren.com/downloads-badge.svg]]
 
 /注：本镜像搭建在 [[https://github.com/zilongshanren][@zilongshanren]] 的 VPS 上，带宽有限，可以考虑使用 [[https://mirrors.tuna.tsinghua.edu.cn/help/elpa/][清华大学 TUNA 镜像源的 ELPA 镜像]]/
 

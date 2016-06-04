@@ -11,11 +11,11 @@ cp -v /var/log/nginx/emacs-china-elpa/access.log elpa-access.log
 
 downloads=$( grep 'URL/Emacs' elpa-access.log | grep -E 'GET /[^ ]*.(tar|el) ' -c )
 
-echo -n $downloads > downloads
+echo -n "{\"downloads\": $downloads, \"last-update\": \"$( date +"%z %F %T" )\", \"update-period\": \"24 hours\"}" > downloads
 
 downloads_hunman_readable=$( numfmt --to=si $downloads )
 
-wget "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20total-green.svg" -O downloads-badge.svg
+wget --retry-connrefused "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20total-green.svg" -O downloads-badge.svg
 
 cp -v downloads /var/elpa
 cp -v downloads-badge.svg /var/elpa
