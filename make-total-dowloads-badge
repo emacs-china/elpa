@@ -1,9 +1,10 @@
-#!/bin/bash -e
+#!/bin/bash
+#
+# 计算下载量，制作 JSON 和 SVG badge，放到
+# https://elpa.zilongshanren.com/downloads
+# https://elpa.zilongshanren.com/downloads-badge.svg
 
-# 精确的下载量 https://elpa.zilongshanren.com/downloads
-# Badge https://elpa.zilongshanren.com/downloads-badge.svg
-
-# 利用 Cron 每天更新一次
+set -e
 
 cd /tmp
 
