@@ -43,7 +43,7 @@
 
 ** 镜像说明
 
-每八小时更新 [[https://travis-ci.org/emacs-china/elpa][file:https://travis-ci.org/emacs-china/elpa.svg?branch=master]] 一次。
+每八小时[[https://travis-ci.org/emacs-china/elpa][更新]]一次。
 
 支持 HTTPS，只需要把 =elpa.zilongshanren.com= 的 http 前缀修改成 https 即可。
 
@@ -77,10 +77,10 @@ https://github.com/emacs-china/elpa/issues
 
 ** 致谢
 
-[[http://zilongshanren.com/][子龙山人]] 提供域名和 VPS
+[[https://github.com/zilongshanren][@zilongshanren]] 提供域名和 VPS
 
 [[https://travis-ci.org/][Travis CI]] 同步的工作在它上面完成，使得我们不用购买一台国外的 VPS
 
-[[https://github.com/li-xinyang][li-xinyang (Li Xinyang)]] 设计 http://elpa.emacs-china.org/ 这个页面
+[[https://github.com/li-xinyang][@li-xinyang]] 设计 http://elpa.emacs-china.org/ 这个页面
 
-[[https://github.com/qinshulei][qinshulei (Qin Shulei)]] 改进 http://elpa.emacs-china.org/ 这个页面
+[[https://github.com/qinshulei][@qinshulei]] 改进 http://elpa.emacs-china.org/ 这个页面
