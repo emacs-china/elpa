@@ -3,4 +3,4 @@
 set -e
 
 /usr/bin/rsync -avz --delete --progress elpa.gnu.org::elpa/ /var/elpa-packages/gnu
-/usr/bin/rsync -av --delete /var/elpa-packages/gnu /var/elpa/gnu
+/usr/bin/rsync -av --delete /var/elpa-packages/gnu/ /var/elpa/gnu
