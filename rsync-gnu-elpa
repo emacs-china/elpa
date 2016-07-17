@@ -1,6 +1,9 @@
 #!/bin/bash
 
+set -x
 set -e
+
+echo ">>> Syncing GNU ELPA <$( date +"%Y-%m-%d %H:%M:%S %Z" )>..."
 
 /usr/bin/rsync -avz --delete --progress elpa.gnu.org::elpa/ /var/elpa-packages/gnu
 /usr/bin/rsync -av --delete /var/elpa-packages/gnu/ /var/elpa/gnu

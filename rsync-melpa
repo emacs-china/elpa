@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -x
+set -e
+
+echo ">>> Syncing MELPA <$( date +"%Y-%m-%d %H:%M:%S %Z" )>..."
+
+/usr/bin/rsync -avz --delete --progress rsync://melpa.org/packages/ /var/elpa-packages/melpa
+/usr/bin/rsync -av --delete /var/elpa-packages/melpa/ /var/elpa/melpa
