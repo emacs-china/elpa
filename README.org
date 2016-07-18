@@ -2,8 +2,6 @@
 
 [[https://travis-ci.org/emacs-china/elpa][file:https://travis-ci.org/emacs-china/elpa.svg?branch=master]] [[https://elpa.zilongshanren.com/downloads][file:https://elpa.zilongshanren.com/downloads-badge.svg]]
 
-/注：本镜像搭建在 [[https://github.com/zilongshanren][@zilongshanren]] 的 VPS 上，带宽有限，可以考虑使用 [[https://mirrors.tuna.tsinghua.edu.cn/help/elpa/][清华大学 TUNA 镜像源的 ELPA 镜像]]/
-
 | ELPA              | 镜像地址                                    |
 |-------------------+---------------------------------------------|
 | [[http://elpa.gnu.org/][GNU ELPA]]          | http://elpa.zilongshanren.com/gnu/          |
@@ -50,24 +48,27 @@
 由于 =emacs-china.org= 没有备案，我们用了[[http://zilongshanren.com/][子龙山人]]提供的子域名。即使将来 \\
 =emacs-china.org= 备案了， =elpa.zilongshanren.com= 也会继续工作。
 
-** 制作新的镜像
+** Rsync
 
-上游的 ELPA 目前都还没有提供制作镜像的方法，如果你也需要制作镜像，可以直接同步本镜像，rsync 地址为
+上游 [[https://github.com/emacs-china/elpa/issues/30][GNU ELPA]] 和 [[https://github.com/melpa/melpa/issues/4020][MELPA]] 提供了 Rsync 服务，其地址分别为：
+
+#+BEGIN_EXAMPLE
+  rsync://elpa.gnu.org/elpa/
+  rsync://melpa.org/packages/
+#+END_EXAMPLE
+
+而对于没有提供 Rsync 服务的 ELPA，你可以考虑使用 Emacs China 提供的 Rsync 服务，其地址分别为：
+
+#+BEGIN_EXAMPLE
+  rsync://elpa.zilongshanren.com/elpa/melpa-stable/
+  rsync://elpa.zilongshanren.com/elpa/marmalade/
+  rsync://elpa.zilongshanren.com/elpa/org/
+#+END_EXAMPLE
+
+你也可以直接从 Emacs China 同步所有的 ELPA，约占 2 G，其地址为：
 
 #+BEGIN_EXAMPLE
   rsync://elpa.zilongshanren.com/elpa/
-#+END_EXAMPLE
-
-本镜像目前（2016-06-03）收录了的 5 个 常见的 ELPA，共占 536M
-
-#+BEGIN_EXAMPLE
-536M      /elpa
-          
-50M       /elpa/gnu
-282M      /elpa/melpa
-129M      /elpa/melpa-stable
-63M       /elpa/marmalade
-13M       /elpa/org
 #+END_EXAMPLE
 
 ** 报告问题
