@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -e
+
+echo ">>> Syncing MELPA Stable <$( date +"%Y-%m-%d %H:%M:%S %Z" )>..."
+
+rsync -avz --delete rsync://stable.melpa.org/packages/ /var/elpa-packages/melpa-stable
+rsync -av --delete /var/elpa-packages/melpa-stable/ /var/elpa/melpa-stable
+
+echo ">>> Done <$( date +"%Y-%m-%d %H:%M:%S %Z" )>"

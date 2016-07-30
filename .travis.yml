@@ -25,7 +25,7 @@ env:
     # GNU ELPA and MELPA provides rsync access, so use it
     # - elpa=gnu
     # - elpa=melpa
-    - elpa=melpa-stable
+    # - elpa=melpa-stable
     - elpa=marmalade
     - elpa=org
     # Disable since the upstream is not accessible sometime
