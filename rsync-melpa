@@ -1,11 +1,12 @@
 #!/bin/bash
 
-set -x
 set -e
 
 echo ">>> Syncing MELPA <$( date +"%Y-%m-%d %H:%M:%S %Z" )>..."
 
-/usr/bin/rsync -avz --delete --progress rsync://melpa.org/packages/ /var/elpa-packages/melpa
-/usr/bin/rsync -av --delete /var/elpa-packages/melpa/ /var/elpa/melpa
+rsync -avz --delete rsync://melpa.org/packages/ /var/elpa-packages/melpa
+rsync -av --delete /var/elpa-packages/melpa/ /var/elpa/melpa
 # Looks like the upstream doesn't have readable perm bit set for some files
-/bin/chmod -R a+r /var/elpa/melpa
+chmod -R a+r /var/elpa/melpa
+
+echo ">>> Done <$( date +"%Y-%m-%d %H:%M:%S %Z" )>"
