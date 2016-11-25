@@ -20,6 +20,7 @@
     (melpa-stable . "http://stable.melpa.org/packages/")
     (marmalade    . "http://marmalade-repo.org/packages/")
     (SC           . "http://joseito.republika.pl/sunrise-commander/")
+    (user42       . "http://download.tuxfamily.org/user42/elpa/packages/")
     (org          . "http://orgmode.org/elpa/"))
   "Mapping of source name and url.")
 
