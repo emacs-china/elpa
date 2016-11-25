@@ -29,7 +29,7 @@ env:
     - elpa=marmalade
     - elpa=org
     # Disable since the upstream is not accessible sometime
-    - elpa=SC
+    - elpa=sunrise-commander
     - elpa=user42
 
 notifications:

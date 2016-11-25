@@ -2,15 +2,15 @@
 
 [[https://travis-ci.org/emacs-china/elpa][file:https://travis-ci.org/emacs-china/elpa.svg?branch=master]] [[https://elpa.zilongshanren.com/downloads][file:https://elpa.zilongshanren.com/downloads-badge.svg]]
 
-| ELPA                   | 镜像地址                                    |
-|------------------------+---------------------------------------------|
-| [[http://elpa.gnu.org/][GNU ELPA]]               | http://elpa.zilongshanren.com/gnu/          |
-| [[https://melpa.org/][MELPA]]                  | http://elpa.zilongshanren.com/melpa/        |
-| [[http://stable.melpa.org/#/][MELPA Stable]]           | http://elpa.zilongshanren.com/melpa-stable/ |
-| [[http://orgmode.org/elpa.html][Org ELPA]]               | http://elpa.zilongshanren.com/org/          |
-| [[Https://marmalade-repo.org/][Marmalade]]              | http://elpa.zilongshanren.com/marmalade/    |
-| [[https://www.emacswiki.org/emacs/Sunrise_Commander][Sunrise Commander ELPA]] | http://elpa.zilongshanren.com/SC/           |
-| [[http://user42.tuxfamily.org/elpa/index.html][user42 ELPA]]            | http://elpa.zilongshanren.com/user42/       |
+| ELPA                   | 镜像地址                                         |
+|------------------------+--------------------------------------------------|
+| [[http://elpa.gnu.org/][GNU ELPA]]               | http://elpa.zilongshanren.com/gnu/               |
+| [[https://melpa.org/][MELPA]]                  | http://elpa.zilongshanren.com/melpa/             |
+| [[http://stable.melpa.org/#/][MELPA Stable]]           | http://elpa.zilongshanren.com/melpa-stable/      |
+| [[http://orgmode.org/elpa.html][Org ELPA]]               | http://elpa.zilongshanren.com/org/               |
+| [[Https://marmalade-repo.org/][Marmalade]]              | http://elpa.zilongshanren.com/marmalade/         |
+| [[https://www.emacswiki.org/emacs/Sunrise_Commander][Sunrise Commander ELPA]] | http://elpa.zilongshanren.com/sunrise-commander/ |
+| [[http://user42.tuxfamily.org/elpa/index.html][user42 ELPA]]            | http://elpa.zilongshanren.com/user42/            |
 
 ** 使用方法
 

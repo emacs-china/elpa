@@ -15,13 +15,13 @@
 (require 'package)
 
 (defvar extract-package-url-source-mapping
-  '((gnu          . "http://elpa.gnu.org/packages/")
-    (melpa        . "http://melpa.org/packages/")
-    (melpa-stable . "http://stable.melpa.org/packages/")
-    (marmalade    . "http://marmalade-repo.org/packages/")
-    (SC           . "http://joseito.republika.pl/sunrise-commander/")
-    (user42       . "http://download.tuxfamily.org/user42/elpa/packages/")
-    (org          . "http://orgmode.org/elpa/"))
+  '((gnu               . "http://elpa.gnu.org/packages/")
+    (melpa             . "http://melpa.org/packages/")
+    (melpa-stable      . "http://stable.melpa.org/packages/")
+    (marmalade         . "http://marmalade-repo.org/packages/")
+    (sunrise-commander . "http://joseito.republika.pl/sunrise-commander/")
+    (user42            . "http://download.tuxfamily.org/user42/elpa/packages/")
+    (org               . "http://orgmode.org/elpa/"))
   "Mapping of source name and url.")
 
 (defun extract-package-url (elpa)
