@@ -1,24 +1,66 @@
+#+OPTIONS: title:nil
+#+OPTIONS: num:nil
+#+OPTIONS: toc:nil
+#+OPTIONS: html-style:nil
+#+OPTIONS: html-scripts:nil
+#+OPTIONS: html-preamble:nil
+#+OPTIONS: html-postamble:nil
 #+TITLE: ELPA 镜像 - Emacs China
+#+AUTHOR: Emacs China
+#+HTML_HEAD: <link rel="apple-touch-icon" type="image/png" href="https://emacs-china.org/uploads/default/original/1X/ebb284b1e209aa93c9744227e1374130f8190aec.png">
+#+HTML_HEAD: <link rel="icon" sizes="144x144" href="https://emacs-china.org/uploads/default/original/1X/ebb284b1e209aa93c9744227e1374130f8190aec.png">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://emacs-china.org/uploads/default/original/1X/477ac7ed14175dfd2deb65ee3c3d83d18a8906b8.ico">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-[[https://travis-ci.org/emacs-china/elpa][file:https://travis-ci.org/emacs-china/elpa.svg?branch=master]] [[https://elpa.zilongshanren.com/downloads][file:https://elpa.zilongshanren.com/downloads-badge.svg]]
+#+BEGIN_EXPORT html
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'emacs-china/chat'
+  };
+</script>
+<script src="https://cdn.staticfile.org/gitter-sidecar/1.2.4/sidecar.js" async defer></script>
+<nav id="bar">
+  <div>
+        <a class="nav-link blue" href="https://emacs-china.org/"><i class="fa fa-group" aria-hidden="true"></i>&nbsp;Forum</a>
+        <a class="nav-link yellow" href="http://book.emacs-china.org" target="_blank"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book</a>
+        <a class="nav-link violet" href="https://elpa.emacs-china.org"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;ELPA</a>
+        <a class="nav-link orange" href="http://donate.emacs-china.org"> <i class="fa fa-heart" aria-hidden="true"></i> &nbsp;Donation</a>
+        <a class="fork-us" href="https://github.com/emacs-china" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
+            &nbsp;Fork Us</a>
+  </div>
+</nav>
+<div class="heading">
+    <h1 class="heading-main">
+        <span class="img">
+            <img class="emacs-china-logo" src="./imgs/logo.png"/>
+        </span>
+        <span class="text">ELPA 镜像</span>
+    </h1>
+</div>
+#+END_EXPORT
 
-| ELPA                   | 镜像地址                                         |
-|------------------------+--------------------------------------------------|
-| [[http://elpa.gnu.org/][GNU ELPA]]               | http://elpa.zilongshanren.com/gnu/               |
-| [[https://melpa.org/][MELPA]]                  | http://elpa.zilongshanren.com/melpa/             |
-| [[http://stable.melpa.org/#/][MELPA Stable]]           | http://elpa.zilongshanren.com/melpa-stable/      |
-| [[http://orgmode.org/elpa.html][Org ELPA]]               | http://elpa.zilongshanren.com/org/               |
-| [[Https://marmalade-repo.org/][Marmalade]]              | http://elpa.zilongshanren.com/marmalade/         |
-| [[https://www.emacswiki.org/emacs/Sunrise_Commander][Sunrise Commander ELPA]] | http://elpa.zilongshanren.com/sunrise-commander/ |
-| [[http://user42.tuxfamily.org/elpa/index.html][user42 ELPA]]            | http://elpa.zilongshanren.com/user42/            |
+[[https://elpa.emacs-china.org/downloads][file:https://elpa.emacs-china.org/downloads-badge.svg]]
+
+| ELPA                   | 镜像地址                                       |
+|------------------------+------------------------------------------------|
+| [[http://elpa.gnu.org/][GNU ELPA]]               | http://elpa.emacs-china.org/gnu/               |
+| [[https://melpa.org/][MELPA]]                  | http://elpa.emacs-china.org/melpa/             |
+| [[http://stable.melpa.org/#/][MELPA Stable]]           | http://elpa.emacs-china.org/melpa-stable/      |
+| [[Https://marmalade-repo.org/][Marmalade]]              | http://elpa.emacs-china.org/marmalade/         |
+| [[http://orgmode.org/elpa.html][Org]]                    | http://elpa.emacs-china.org/org/               |
+| [[https://www.emacswiki.org/emacs/Sunrise_Commander][Sunrise Commander ELPA]] | http://elpa.emacs-china.org/sunrise-commander/ |
+| [[http://user42.tuxfamily.org/elpa/index.html][user42 ELPA]]            | http://elpa.emacs-china.org/user42/            |
+
+如果需要 HTTPS，请将镜像地址中的 ~http~ 改成 ~https~ 。
 
 ** 使用方法
 
 根据你的需求，设置 ~package-archives~ ，比如用 GNU ELPA 和 MELPA：
 
 #+BEGIN_SRC emacs-lisp
-  (setq package-archives '(("gnu"   . "http://elpa.zilongshanren.com/gnu/")
-                           ("melpa" . "http://elpa.zilongshanren.com/melpa/")))
+  (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+                           ("melpa" . "http://elpa.emacs-china.org/melpa/")))
 #+END_SRC
 
 *** Spacemacs 用户
@@ -27,9 +69,9 @@
 
 #+BEGIN_SRC emacs-lisp
   (setq configuration-layer--elpa-archives
-      '(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
-        ("org-cn"   . "http://elpa.zilongshanren.com/org/")
-        ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
+      '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+        ("org-cn"   . "http://elpa.emacs-china.org/org/")
+        ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
 #+END_SRC
 
 *** Cask 用户
@@ -37,53 +79,40 @@
 [[https://github.com/cask/cask][Cask]] 是一个 Emacs Lisp 的项目管理工具。这里还是以 GNU ELPA 和 MELPA 为例，在添加下面的代码到 ~Cask~
 
 #+BEGIN_SRC emacs-lisp
-  (source "gnu"   "http://elpa.zilongshanren.com/gnu/")
-  (source "melpa" "http://elpa.zilongshanren.com/melpa/")
+  (source "gnu"   "http://elpa.emacs-china.org/gnu/")
+  (source "melpa" "http://elpa.emacs-china.org/melpa/")
 #+END_SRC
 
 ** 镜像说明
 
-每八小时[[https://travis-ci.org/emacs-china/elpa][更新]]一次。
+对于上游提供了 Rsync 服务的 ELPA，通过 Rsync 方式同步，同步间隔为 4 小时。对于没有提供 Rsync 服务的 ELPA，通过 HTTP 方式同步，同步间隔为 8 小时。
 
-支持 HTTPS，只需要把 =elpa.zilongshanren.com= 的 http 前缀修改成 https 即可。
+** 用 Rsync 同步本镜像
 
-由于 =emacs-china.org= 没有备案，我们用了[[http://zilongshanren.com/][子龙山人]]提供的子域名。即使将来 \\
-=emacs-china.org= 备案了， =elpa.zilongshanren.com= 也会继续工作。
+整个镜像约占 1 GB，地址为：
 
-** Rsync
+#+BEGIN_SRC undefined
+  rsync://elpa.emacs-china.org/elpa/
+#+END_SRC
+
+下游 Tsinghua Mirrors 的 [[https://mirrors.tuna.tsinghua.edu.cn/help/elpa/][ELPA 镜像]] 也提供了 Rsync 服务，地址是：
+
+#+BEGIN_SRC undefined
+  rsync://mirrors.tuna.tsinghua.edu.cn/elpa/
+#+END_SRC
 
 上游 [[https://github.com/emacs-china/elpa/issues/30][GNU ELPA]] 和 [[https://github.com/melpa/melpa/issues/4020][MELPA]] 提供了 Rsync 服务，其地址分别为：
 
-#+BEGIN_EXAMPLE
+#+BEGIN_SRC undefined
   rsync://elpa.gnu.org/elpa/
   rsync://melpa.org/packages/
-#+END_EXAMPLE
+#+END_SRC
 
-而对于没有提供 Rsync 服务的 ELPA，你可以考虑使用 Emacs China 提供的 Rsync 服务，其地址分别为：
+** News
 
-#+BEGIN_EXAMPLE
-  rsync://elpa.zilongshanren.com/elpa/melpa-stable/
-  rsync://elpa.zilongshanren.com/elpa/marmalade/
-  rsync://elpa.zilongshanren.com/elpa/org/
-#+END_EXAMPLE
-
-你也可以直接从 Emacs China 同步所有的 ELPA，约占 2 G，其地址为：
-
-#+BEGIN_EXAMPLE
-  rsync://elpa.zilongshanren.com/elpa/
-#+END_EXAMPLE
+- 2016/12/02 域名更改为 ~elpa.emacs-china.org~ 。原来使用的 ~elpa.zilongshanren.com~ 的 HTTP、HTTPS 和 Rsync 仍照常工作
+- 2016/11/25 添加 Sunrise Commander ELPA 和 user42 ELPA
 
 ** 报告问题
 
 https://github.com/emacs-china/elpa/issues
-
-
-** 致谢
-
-[[https://github.com/zilongshanren][@zilongshanren]] 提供域名和 VPS
-
-[[https://travis-ci.org/][Travis CI]] 同步的工作在它上面完成，使得我们不用购买一台国外的 VPS
-
-[[https://github.com/li-xinyang][@li-xinyang]] 设计 http://elpa.emacs-china.org/ 这个页面
-
-[[https://github.com/qinshulei][@qinshulei]] 改进 http://elpa.emacs-china.org/ 这个页面
