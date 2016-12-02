@@ -1,172 +1,174 @@
+/* Thanks https://github.com/li-xinyang for creating this file */
+/* Thanks https://github.com/qinshulei for improving this file */
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f2efe4;
-    font-family: sans-serif;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f2efe4;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 .heading-main {
-    font-size: 70px;
-    display: table;
-    color: #41208c;
-    font-weight: 100;
-    margin: 30px auto 30px;
+  font-size: 70px;
+  display: table;
+  color: #41208c;
+  font-weight: 100;
+  margin: 30px auto 30px;
 }
 
 .heading-main .span,
 .heading-main .text {
-    vertical-align: middle;
-    display: table-cell;
-    text-shadow: 1px 1px #633e8a;
+  vertical-align: middle;
+  display: table-cell;
+  text-shadow: 1px 1px #633e8a;
 }
 
 .emacs-china-logo {
-    width: 100px;
-    padding: 0 15px 0 0;
-    position: relative;
-    top: 5px;
+  width: 100px;
+  padding: 0 15px 0 0;
+  position: relative;
+  top: 5px;
 }
 
 nav#bar {
-    width: 100%;
-    height: 48px;
-    background: #7F5AB6;
+  width: 100%;
+  height: 48px;
+  background: #7F5AB6;
 }
 
 nav#bar div {
-    width: 490px;
-    margin: 0px auto;
+  width: 490px;
+  margin: 0px auto;
 }
 
 nav#bar a.nav-link {
-    color: #FFF;
-    text-decoration: none;
-    text-align: center;
-    -webkit-text-stroke: 0.2px;
-    font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  -webkit-text-stroke: 0.2px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 nav#bar a.nav-link {
-    line-height: 48px;
-    min-width: 90px;
-    text-align: center;
-    font-size: 16px;
-    float: left;
+  line-height: 48px;
+  min-width: 90px;
+  text-align: center;
+  font-size: 16px;
+  float: left;
 }
 
 nav#bar a.red.selected {
-    color: #d13332;
-    border-color: #d13332 !important;
+  color: #d13332;
+  border-color: #d13332 !important;
 }
 
 nav#bar a.red:hover {
-    color: #d13332;
-    text-shadow: 0px 0px 5px #d13332;
+  color: #d13332;
+  text-shadow: 0px 0px 5px #d13332;
 }
 
 nav#bar a.orange.selected {
-    color: #ea5932;
-    border-color: #ea5932 !important;
+  color: #ea5932;
+  border-color: #ea5932 !important;
 }
 
 nav#bar a.orange:hover {
-    color: #ea5932;
-    text-shadow: 0px 0px 5px #ea5932;
+  color: #ea5932;
+  text-shadow: 0px 0px 5px #ea5932;
 }
 
 nav#bar a.yellow.selected {
-    color: #fff9ae;
-    border-color: #fff9ae !important;
+  color: #fff9ae;
+  border-color: #fff9ae !important;
 }
 
 nav#bar a.yellow:hover {
-    color: #fff9ae;
-    text-shadow: 0px 0px 5px #fff9ae;
+  color: #fff9ae;
+  text-shadow: 0px 0px 5px #fff9ae;
 }
 
 nav#bar a.green.selected {
-    color: #18b159;
-    border-color: #18b159 !important;
+  color: #18b159;
+  border-color: #18b159 !important;
 }
 
 nav#bar a.green:hover {
-    color: #18b159;
-    text-shadow: 0px 0px 5px #18b159;
+  color: #18b159;
+  text-shadow: 0px 0px 5px #18b159;
 }
 
 nav#bar a.blue.selected {
-    color: #00aeef;
-    border-color: #00aeef !important;
+  color: #00aeef;
+  border-color: #00aeef !important;
 }
 
 nav#bar a.blue:hover {
-    color: #00aeef;
-    text-shadow: 0px 0px 5px #00aeef;
+  color: #00aeef;
+  text-shadow: 0px 0px 5px #00aeef;
 }
 
 nav#bar a.grey.selected {
-    color: #aaa;
-    border-color: #aaa !important;
+  color: #aaa;
+  border-color: #aaa !important;
 }
 
 nav#bar a.grey:hover {
-    color: #aaa;
-    text-shadow: 0px 0px 5px #aaa;
+  color: #aaa;
+  text-shadow: 0px 0px 5px #aaa;
 }
 
 nav#bar a.violet.selected {
-    color: violet;
-    border-color: #aaa !important;
+  color: violet;
+  border-color: #aaa !important;
 }
 
 nav#bar a.violet:hover {
-    color: violet;
-    text-shadow: 0px 0px 5px #aaa;
+  color: violet;
+  text-shadow: 0px 0px 5px #aaa;
 }
 
 nav#bar a.nav-link.selected {
-    line-height: 42px;
-    border-top: 3px solid #0b0d0d;
-    background-color: #0b0d0d;
-    height: 45px;
+  line-height: 42px;
+  border-top: 3px solid #0b0d0d;
+  background-color: #0b0d0d;
+  height: 45px;
 }
 
 nav#bar a.fork-us {
-    float: right;
-    border-radius: 4px;
-    background-color: #543596;
-    width: 104px;
-    height: 32px;
-    line-height: 32px;
-    margin-top: 8px;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    color: #FFF;
-    text-align: center;
-    font-family: sans-serif;
+  float: right;
+  border-radius: 4px;
+  background-color: #543596;
+  width: 104px;
+  height: 32px;
+  line-height: 32px;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  font-family: sans-serif;
 }
 
 nav#bar a.fork-us:hover {
-    background-color: #3E2672;
+  background-color: #3E2672;
 }
 
 nav#bar a.fork-us:active {
-    background-color: #000;
+  background-color: #000;
 }
 
 .fa-github {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 #content {}
 
 p {
-    max-width: 600px;
-    margin: 15px auto;
-    padding: 0 10px;
-    text-align: left;
+  max-width: 600px;
+  margin: 15px auto;
+  padding: 0 10px;
+  text-align: left;
 }
 
 #orgheadline1,
@@ -176,89 +178,89 @@ p {
 #orgheadline5,
 #orgheadline6,
 #orgheadline7{
-    color: #633e8a;
+  color: #633e8a;
 }
 
 .outline-2 {
-    margin-top: 77px;
-    margin: 77px 0;
+  margin-top: 77px;
+  margin: 77px 0;
 }
 
 .org-src-container {
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
-    overflow-x: auto;
-    background: white;
-    padding: 5px;
-    border-left: 3px solid #7f5ab6;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow-x: auto;
+  background: white;
+  padding: 5px;
+  border-left: 3px solid #7f5ab6;
 }
 
 .org-left {
-    text-align: left;
+  text-align: left;
 }
 
 a {
-    color: #543596;
+  color: #543596;
 }
 
 a:hover {
-    color: #41208c;
+  color: #41208c;
 }
 
 table {
-    width: 100%;
-    margin: 30px auto;
-    max-width: 600px;
-    border-collapse: collapse;
+  width: 100%;
+  margin: 30px auto;
+  max-width: 600px;
+  border-collapse: collapse;
 }
 
 th {
-    font-weight: bold;
-    color: #633e8a;
+  font-weight: bold;
+  color: #633e8a;
 }
 
 td,
 th {
-    padding: 6px;
-    text-align: left;
+  padding: 6px;
+  text-align: left;
 }
 
 @media (max-width: 500px) {
-    .emacs-china-logo {
-        width: 70px
-    }
-    .text {
-        font-size: 45px;
-    }
+  .emacs-china-logo {
+    width: 70px
+  }
+  .text {
+    font-size: 45px;
+  }
 }
 
 @media (max-width: 450px) {
-    .fa {
-        display: none;
-    }
-    .nav-link {
-        min-width: 65px !important;
-    }
-    .fork-us {
-        float: left !important;
-        margin-left: 10px;
-    }
+  .fa {
+    display: none;
+  }
+  .nav-link {
+    min-width: 65px !important;
+  }
+  .fork-us {
+    float: left !important;
+    margin-left: 10px;
+  }
 }
 
 code{
-    background:white;
-    border:solid 1px #e1e4e5;
-    overflow-x:auto;
-    padding:0 5px;
-    white-space:nowrap;
+  background:white;
+  border:solid 1px #e1e4e5;
+  overflow-x:auto;
+  padding:0 5px;
+  white-space:nowrap;
 }
 
 ol, ul {
-    max-width: 600px;
-    margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 li {
-    text-align: left;
+  text-align: left;
 }
