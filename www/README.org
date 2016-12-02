@@ -1,0 +1,7 @@
+This directory is for the webpage at https://elpa.emacs-china.org/.
+
+* Deploy
+
+1. Export ~../README.org~ to ~../README.html~
+2. Move ~../README.html~ to ~./index.html~
+3. Copy ~./~ to VPS
