@@ -25,7 +25,7 @@
         <a class="nav-link blue" href="https://emacs-china.org/"><i class="fa fa-group" aria-hidden="true"></i>&nbsp;Forum</a>
         <a class="nav-link yellow" href="http://book.emacs-china.org" target="_blank"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book</a>
         <a class="nav-link violet" href="https://elpa.emacs-china.org"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;ELPA</a>
-        <a class="nav-link orange" href="http://donate.emacs-china.org"> <i class="fa fa-heart" aria-hidden="true"></i> &nbsp;Donation</a>
+        <a class="nav-link orange" href="http://donate.emacs-china.org"> <i class="fa fa-heart" aria-hidden="true"></i> &nbsp;Donate</a>
         <a class="fork-us" href="https://github.com/emacs-china" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
             &nbsp;Fork Us</a>
   </div>
