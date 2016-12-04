@@ -4,7 +4,7 @@ set -e
 
 echo ">>> Syncing GNU ELPA <$( date +"%Y-%m-%d %H:%M:%S %Z" )>..."
 
-rsync -avz --delete --progress elpa.gnu.org::elpa/ /var/elpa-packages/gnu
+rsync -avz --delete --progress --chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r elpa.gnu.org::elpa/ /var/elpa-packages/gnu
 rsync -av --delete /var/elpa-packages/gnu/ /var/elpa/gnu
 
 echo ">>> Done <$( date +"%Y-%m-%d %H:%M:%S %Z" )>"
