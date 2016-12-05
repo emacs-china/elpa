@@ -14,12 +14,6 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/style.css">
 
 #+BEGIN_EXPORT html
-<script>
-  ((window.gitter = {}).chat = {}).options = {
-    room: 'emacs-china/chat'
-  };
-</script>
-<script src="https://cdn.staticfile.org/gitter-sidecar/1.2.4/sidecar.js" async defer></script>
 <nav id="bar">
   <div>
         <a class="nav-link blue" href="https://emacs-china.org/"><i class="fa fa-group" aria-hidden="true"></i>&nbsp;Forum</a>
