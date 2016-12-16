@@ -3,20 +3,29 @@
 # 计算下载量，制作 JSON 和 SVG badge，放到
 # https://elpa.zilongshanren.com/downloads
 # https://elpa.zilongshanren.com/downloads-badge.svg
+#
+# 用到 grep, jq, wget, numfmt (part of coreutils)
 
-set -e
+set -e                          # Exit immediately if error occurs
 
 cd /tmp
 
 cp -v /var/log/nginx/emacs-china-elpa/access.log elpa-access.log
 
+test -f downloads && downloads_last=$( jq '.downloads' downloads )
 downloads=$( grep 'URL/Emacs' elpa-access.log | grep -E 'GET /[^ ]*.(tar|el) ' -c )
+test -v downloads_last && downloads_yesterday=$(( $downloads - $downloads_last ))
 
 echo -n "{\"downloads\": $downloads, \"last-update\": \"$( date +"%z %F %T" )\", \"update-period\": \"24 hours\"}" > downloads
 
 downloads_hunman_readable=$( numfmt --to=si $downloads )
+test -v downloads_yesterday && downloads_yesterday_human_readable=$( numfmt --to=si $downloads_yesterday )
 
-wget --retry-connrefused "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20total-green.svg" -O downloads-badge.svg
+if test -v downloads_yesterday_human_readable; then
+    wget --retry-connrefused "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20total-brightgreen.svg" -O downloads-badge.svg
+else
+    wget --retry-connrefused "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20total%2C%20${downloads_yesterday_human_readable}%20yesterday-brightgreen.svg" -O downloads-badge.svg
+fi
 
 cp -v downloads /var/elpa
 cp -v downloads-badge.svg /var/elpa
