@@ -22,9 +22,9 @@ downloads_hunman_readable=$( numfmt --to=si $downloads )
 test -v downloads_yesterday && downloads_yesterday_human_readable=$( numfmt --to=si $downloads_yesterday )
 
 if test -v downloads_yesterday_human_readable; then
-    wget --retry-connrefused "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20total-brightgreen.svg" -O downloads-badge.svg
-else
     wget --retry-connrefused "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20total%2C%20${downloads_yesterday_human_readable}%20yesterday-brightgreen.svg" -O downloads-badge.svg
+else
+    wget --retry-connrefused "https://img.shields.io/badge/downloads-${downloads_hunman_readable}%20total-brightgreen.svg" -O downloads-badge.svg
 fi
 
 cp -v downloads /var/elpa
