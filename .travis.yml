@@ -17,6 +17,10 @@ script:
   - emacs --version
   - travis_retry ./download && ls && du -sh && travis_retry ./deploy
 
+after_success:
+  - TZ=Asia/Shanghai date +"https://img.shields.io/badge/last update-%Y--%m--%d %H:%M-brightgreen.svg" | xargs -i wget {} -O last-update.svg
+  - rsync -av --chmod=Fu=rw,Fg=r,Fo=r last-update.svg $DEPLOY_USER@$DEPLOY_HOST:/var/elpa/
+
 env:
   global:
   - secure: o2GyLB03+uKRfra3kx0TNC6w+ebs6TI6tepl5TkTaIC9d3DY7bcNlGW8JlPB5f/nA0A4HnaAWqGaCY0LKjemy1qynjVTI+1hupV3rY+Vu/Beu+YTEW0XZb3jgxCD0e2jeI20kzh3ntr5tVULz2h1UtsTSwEjrOYIOncZ+6zWRdhu8XQyU27gPD6ai0oyWQzJw5mlPpnaRZ7UC0GSRMXO3Dla7e+fkdKTfzILLBAj7Gqn0Q1W+BOk3yFeFwkwYqJTmJV3g1V1aQy9urBodQ82ttOPwge1+mKhfNcp9ZS/YEBb3gEwAWtF3mp+CyCgNxPnvfhvFqyGPHrYf/0FIMZyioATJW6G5poI3/E3v7/jqQSw8AkgKz09C/GDZWroLyfGyKg7R8kcSf4vbMXQc1wdOnRI/1v6tf0kA3z2sdJfxw7OkpdDbSekrXHce16UANeg6Vl6oDsz6SO0ab1CP+uE/BWgigRGyN00MGaROspDuEyOkL80ppJ0q4VhN3p1NSHngpDo/xv9LJGXZaIk2ElUAd+g1knXyIJRhrfxItRiAcf3McURUvFiJqsSDRbmjJhp6yZnzp+mJFhRkMSmmAauirHg9fwR7T43zzl3F/s59ld0BOcllMdogQTCejo76TOPFysYBhosKDd/CoVD9mFpTmJWp2p0ReJt/8U5IXKeafk=

@@ -35,6 +35,7 @@
 #+END_EXPORT
 
 [[https://elpa.emacs-china.org/downloads][file:https://elpa.emacs-china.org/downloads-badge.svg]]
+[[https://travis-ci.org/emacs-china/elpa/downloads][file:https://elpa.emacs-china.org/last-update.svg]]
 
 | ELPA                   | 镜像地址                                       |
 |------------------------+------------------------------------------------|
