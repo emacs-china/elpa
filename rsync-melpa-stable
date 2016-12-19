@@ -5,6 +5,6 @@ set -e
 echo ">>> Syncing MELPA Stable <$( date +"%Y-%m-%d %H:%M:%S %Z" )>..."
 
 rsync -avz --delete --chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r rsync://stable.melpa.org/packages/ /var/elpa-packages/melpa-stable
-rsync -av --delete /var/elpa-packages/melpa-stable/ /var/elpa/melpa-stable
+rsync -av /var/elpa-packages/melpa-stable/ /var/elpa/melpa-stable
 
 echo ">>> Done <$( date +"%Y-%m-%d %H:%M:%S %Z" )>"
