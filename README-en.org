@@ -1,0 +1,113 @@
+#+OPTIONS: title:nil
+#+OPTIONS: num:nil
+#+OPTIONS: toc:nil
+#+OPTIONS: html-style:nil
+#+OPTIONS: html-scripts:nil
+#+OPTIONS: html-preamble:nil
+#+OPTIONS: html-postamble:nil
+#+TITLE: ELPA Mirror - Emacs China
+#+AUTHOR: Emacs China
+#+HTML_HEAD: <link rel="apple-touch-icon" type="image/png" href="https://emacs-china.org/uploads/default/original/1X/ebb284b1e209aa93c9744227e1374130f8190aec.png">
+#+HTML_HEAD: <link rel="icon" sizes="144x144" href="https://emacs-china.org/uploads/default/original/1X/ebb284b1e209aa93c9744227e1374130f8190aec.png">
+#+HTML_HEAD: <link rel="icon" type="image/png" href="https://emacs-china.org/uploads/default/original/1X/477ac7ed14175dfd2deb65ee3c3d83d18a8906b8.ico">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+#+BEGIN_EXPORT html
+<nav id="bar">
+  <div>
+        <a class="nav-link blue" href="https://emacs-china.org/"><i class="fa fa-group" aria-hidden="true"></i>&nbsp;Forum</a>
+        <a class="nav-link yellow" href="http://book.emacs-china.org" target="_blank"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book</a>
+        <a class="nav-link violet" href="https://elpa.emacs-china.org"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;ELPA</a>
+        <a class="nav-link orange" href="http://donate.emacs-china.org"> <i class="fa fa-heart" aria-hidden="true"></i> &nbsp;Donate</a>
+        <a class="fork-us" href="https://github.com/emacs-china" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
+            &nbsp;Fork Us</a>
+  </div>
+</nav>
+<div class="heading">
+    <h1 class="heading-main">
+        <span class="img">
+            <img class="emacs-china-logo" src="./imgs/logo.png"/>
+        </span>
+        <span class="text">ELPA Mirror</span>
+    </h1>
+</div>
+#+END_EXPORT
+
+[[https://elpa.emacs-china.org/downloads][file:https://elpa.emacs-china.org/downloads-badge.svg]]
+[[https://travis-ci.org/emacs-china/elpa/][file:https://elpa.emacs-china.org/last-update.svg]]
+
+| ELPA                   | URL                                            |
+|------------------------+------------------------------------------------|
+| [[http://elpa.gnu.org/][GNU ELPA]]               | http://elpa.emacs-china.org/gnu/               |
+| [[https://melpa.org/][MELPA]]                  | http://elpa.emacs-china.org/melpa/             |
+| [[http://stable.melpa.org/#/][MELPA Stable]]           | http://elpa.emacs-china.org/melpa-stable/      |
+| [[Https://marmalade-repo.org/][Marmalade]]              | http://elpa.emacs-china.org/marmalade/         |
+| [[http://orgmode.org/elpa.html][Org]]                    | http://elpa.emacs-china.org/org/               |
+| [[https://www.emacswiki.org/emacs/Sunrise_Commander][Sunrise Commander ELPA]] | http://elpa.emacs-china.org/sunrise-commander/ |
+| [[http://user42.tuxfamily.org/elpa/index.html][user42 ELPA]]            | http://elpa.emacs-china.org/user42/            |
+
+To use HTTPS, please replace ~http~ with ~https~.
+
+** Usage
+
+Adjust ~package-archives~ according to your own need, for example, to use GNU ELPA and MELPA:
+
+#+BEGIN_SRC emacs-lisp
+  (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
+                           ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+#+END_SRC
+
+*** Spacemacs
+
+Put this to ~dotspacemacs/user-init()~ in the file ~.spacemacs~:
+
+#+BEGIN_SRC emacs-lisp
+  (setq configuration-layer--elpa-archives
+      '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+        ("org-cn"   . "http://elpa.emacs-china.org/org/")
+        ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+#+END_SRC
+
+*** [[https://github.com/cask/cask][Cask]]
+
+Add the following to your ~Cask~:
+
+#+BEGIN_SRC emacs-lisp
+  (source "gnu"   "http://elpa.emacs-china.org/gnu/")
+  (source "melpa" "http://elpa.emacs-china.org/melpa/")
+#+END_SRC
+
+** How does the mirror update?
+
+We use rsync to update every 4 hours from upstreams for those who provide the
+service, such as GNU ELPA and MELPA; for the rest, we download all packages via
+HTTP to update every 8 hours.
+
+Note that I understand that it's not polite to download everything periodically,
+if you worry about this, please contact us via GitHub issue.
+
+** Mirroring the Emacs China ELPA Mirror via Rsync
+
+#+BEGIN_SRC undefined
+  rsync://elpa.emacs-china.org/elpa/
+#+END_SRC
+
+Our downstream, Tsinghua Mirrors' [[https://mirrors.tuna.tsinghua.edu.cn/help/elpa][ELPA Mirror]], also provides the Rsync service:
+
+#+BEGIN_SRC undefined
+  rsync://mirrors.tuna.tsinghua.edu.cn/elpa/
+#+END_SRC
+
+** [[https://elpa.emacs-china.org/packages/][ELPA Packages]]
+
+You can visit [[https://elpa.emacs-china.org/packages/][ELPA Packages]] to find out all packages on the mirror.
+
+** News
+
+- 2016/12/02 Use new domain ~elpa.emacs-china.org~. The original ~elpa.zilongshanren.com~ will keep working.
+- 2016/11/25 Support Sunrise Commander ELPA and user42 ELPA
+
+** Report Issue
+
+https://github.com/emacs-china/elpa/issues
