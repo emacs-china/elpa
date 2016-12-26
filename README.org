@@ -103,6 +103,10 @@
   rsync://melpa.org/packages/
 #+END_SRC
 
+** [[https://elpa.emacs-china.org/packages/][ELPA Packages]]
+
+你可以访问 [[https://elpa.emacs-china.org/packages/][ELPA Packages]] 来查看目前镜像上提供的所有的包。
+
 ** News
 
 - 2016/12/02 域名更改为 ~elpa.emacs-china.org~ 。原来使用的 ~elpa.zilongshanren.com~ 的 HTTP、HTTPS 和 Rsync 仍照常工作
