@@ -109,6 +109,7 @@
 
 ** News
 
+- 2017/01/16 VPS 带宽从 1 Mbps 升级至 2 Mbps
 - 2016/12/02 域名更改为 ~elpa.emacs-china.org~ 。原来使用的 ~elpa.zilongshanren.com~ 的 HTTP、HTTPS 和 Rsync 仍照常工作
 - 2016/11/25 添加 Sunrise Commander ELPA 和 user42 ELPA
 

@@ -105,6 +105,7 @@ You can visit [[https://elpa.emacs-china.org/packages/][ELPA Packages]] to find 
 
 ** News
 
+- 2017/01/16 Upgrade VPS bandwidth from 1 Mbps to 2 Mbps
 - 2016/12/02 Use new domain ~elpa.emacs-china.org~. The original ~elpa.zilongshanren.com~ will keep working.
 - 2016/11/25 Support Sunrise Commander ELPA and user42 ELPA
 
