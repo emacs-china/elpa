@@ -63,7 +63,7 @@
 添加下面的代码到 ~.spacemacs~ 的 ~dotspacemacs/user-init()~
 
 #+BEGIN_SRC emacs-lisp
-  (setq configuration-layer--elpa-archives
+  (setq configuration-layer-elpa-archives
       '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
         ("org-cn"   . "http://elpa.emacs-china.org/org/")
         ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
