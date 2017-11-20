@@ -69,6 +69,17 @@
         ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
 #+END_SRC
 
+**** develop 分支
+
+使用 ~configuration-layer-elpa-archives~ 代替原来的 ~configuration-layer--elpa-archives~ （ ~--~ 换成 ~-~ ）
+
+#+BEGIN_SRC emacs-lisp
+  (setq configuration-layer-elpa-archives
+      '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
+        ("org-cn"   . "http://elpa.emacs-china.org/org/")
+        ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
+#+END_SRC
+
 *** Cask 用户
 
 [[https://github.com/cask/cask][Cask]] 是一个 Emacs Lisp 的项目管理工具。这里还是以 GNU ELPA 和 MELPA 为例，在添加下面的代码到 ~Cask~
