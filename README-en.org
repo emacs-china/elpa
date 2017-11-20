@@ -63,7 +63,7 @@ Adjust ~package-archives~ according to your own need, for example, to use GNU EL
 Put this to ~dotspacemacs/user-init()~ in the file ~.spacemacs~:
 
 #+BEGIN_SRC emacs-lisp
-  (setq configuration-layer--elpa-archives
+  (setq configuration-layer-elpa-archives
       '(("melpa-cn" . "http://elpa.emacs-china.org/melpa/")
         ("org-cn"   . "http://elpa.emacs-china.org/org/")
         ("gnu-cn"   . "http://elpa.emacs-china.org/gnu/")))
