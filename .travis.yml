@@ -34,7 +34,10 @@ env:
   matrix:
     # GNU ELPA and MELPA provides rsync access, so use it
     - elpa=gnu
-    # - elpa=melpa
+    # FIXME Temporary fix
+    # https://emacs-china.org/t/topic/5425
+    # https://github.com/melpa/melpa/issues/5402
+    - elpa=melpa
     # - elpa=melpa-stable
     - elpa=marmalade
     - elpa=org
