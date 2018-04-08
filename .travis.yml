@@ -38,11 +38,11 @@ env:
     # https://emacs-china.org/t/topic/5425
     # https://github.com/melpa/melpa/issues/5402
     - elpa=melpa
-    # - elpa=melpa-stable
+    - elpa=melpa-stable
     - elpa=marmalade
     - elpa=org
-    # Disable since the upstream is not accessible sometime
-    - elpa=sunrise-commander
+    # Disable since http://joseito.republika.pl/sunrise-commander/ is no longer working (2018-04-08)
+    # - elpa=sunrise-commander
     - elpa=user42
 
 notifications:
