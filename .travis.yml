@@ -34,11 +34,8 @@ env:
   matrix:
     # GNU ELPA and MELPA provides rsync access, so use it
     - elpa=gnu
-    # FIXME Temporary fix
-    # https://emacs-china.org/t/topic/5425
-    # https://github.com/melpa/melpa/issues/5402
-    - elpa=melpa
-    - elpa=melpa-stable
+    # - elpa=melpa
+    # - elpa=melpa-stable
     - elpa=marmalade
     - elpa=org
     # Disable since http://joseito.republika.pl/sunrise-commander/ is no longer working (2018-04-08)
