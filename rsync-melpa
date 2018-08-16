@@ -4,7 +4,7 @@ set -e
 
 echo ">>> Syncing MELPA <$( date +"%Y-%m-%d %H:%M:%S %Z" )>..."
 
-rsync -avz --delete --chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r rsync://melpa.org/packages/ /var/elpa-packages/melpa
+rsync -avz --delete --exclude="- /index.html" --chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r rsync://melpa.org/packages/ /var/elpa-packages/melpa
 rsync -av /var/elpa-packages/melpa/ /var/elpa/melpa
 # Looks like the upstream doesn't have readable perm bit set for some files
 chmod -R a+r /var/elpa/melpa
