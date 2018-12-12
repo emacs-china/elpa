@@ -4,7 +4,8 @@ set -e
 
 echo ">>> Syncing MELPA Stable <$( date +"%Y-%m-%d %H:%M:%S %Z" )>..."
 
-rsync -avz --delete --chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r rsync://melpa.org/packages-stable/ /var/elpa-packages/melpa-stable
+rsync -avz --delete --exclude="- /index.html" --chmod=Du=rwx,Dg=rx,Do=rx,Fu=rw,Fg=r,Fo=r rsync://melpa.org/packages-stable/ /var/elpa-packages/melpa-stable
 rsync -av /var/elpa-packages/melpa-stable/ /var/elpa/melpa-stable
+chmod -R a+r /var/elpa/melpa-stable
 
 echo ">>> Done <$( date +"%Y-%m-%d %H:%M:%S %Z" )>"
