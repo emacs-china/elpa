@@ -49,10 +49,10 @@
 
 To use HTTPS, please replace ~http~ with ~https~.
 
-TUNA and SJTUG provide the same service as this site. You may replace `http://elpa.emacs-china.org/` with:
+TUNA and SJTUG provide the same service as this site. You may replace ~http://elpa.emacs-china.org/~ with:
 
-* TUNA: `https://mirrors.tuna.tsinghua.edu.cn/elpa/`
-* SJTUG: `https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/`
+* TUNA: ~https://mirrors.tuna.tsinghua.edu.cn/elpa/~
+* SJTUG: ~https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/~
 
 ** Usage
 
