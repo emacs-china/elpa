@@ -49,6 +49,11 @@
 
 如果需要 HTTPS，请将镜像地址中的 ~http~ 改成 ~https~ 。
 
+TUNA 与 SJTUG 提供与本站一致的镜像服务。如果需要使用，可以将上述地址中的 ~http://elpa.emacs-china.org/~ 替换为：
+
+- TUNA: ~https://mirrors.tuna.tsinghua.edu.cn/elpa/~
+- SJTUG: ~https://mirrors.sjtug.sjtu.edu.cn/emacs-elpa/~
+
 ** 使用方法
 
 根据你的需求，设置 ~package-archives~ ，比如用 GNU ELPA 和 MELPA：
