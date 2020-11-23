@@ -42,6 +42,7 @@ env:
     # Disable since http://joseito.republika.pl/sunrise-commander/ is no longer working (2018-04-08)
     # - elpa=sunrise-commander
     - elpa=user42
+    - elpa=nongnu
 
 notifications:
   email:

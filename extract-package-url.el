@@ -16,6 +16,7 @@
 
 (defvar extract-package-url-source-mapping
   '((gnu               . "http://elpa.gnu.org/packages/")
+    (nongnu            . "http://elpa.gnu.org/nongnu/")
     (melpa             . "http://melpa.org/packages/")
     (melpa-stable      . "http://stable.melpa.org/packages/")
     (marmalade         . "http://marmalade-repo.org/packages/")
