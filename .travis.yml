@@ -15,6 +15,7 @@ before_install:
   - chmod 600 /tmp/deploy_rsa
   - eval "$(ssh-agent -s)"
   - ssh-add /tmp/deploy_rsa
+  - mkdir -p ~/.ssh && echo "Host *" >> ~/.ssh/config && echo " StrictHostKeyChecking no" >> ~/.ssh/config
   - ssh root@elpa.emacs-china.org "uname -a && ls"
   - sudo apt-get install aria2 -qq
   - sudo apt-get install -qq emacs24-nox
