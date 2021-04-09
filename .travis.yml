@@ -33,7 +33,7 @@ env:
   - secure: PElm6lmjPT5w5trMZwXQMrscUiTFdgQdcC5JyNc5UlJqA2+zETP5DGBgMQhyHDD4Vw9vpmdzNRHCoD5Nz5bYoaLjYOSd90AD7Oe19o7rPP/pWxiCWFGKqPiu+y8zbEarQ39vIi17DdfBeTTiCyBmP36FWRsSEg0stJCsTnRE7p9imw1Vwje/eYwknb8vCSMUwGTDaUK1diRbHvoJx3szTIHJ0iUygg9ww1vVdZLqggjs/TMRd5PZKlBl/B4KvFgCtZSOb6pQLA2Th//pY5pof+NGYQs8j8W//ABiX3i0eBzzybQNRiB3dBxtX/C2gGFvm+x10062osQUuDOeXebWA68njD0RGC4GxZZNGJTzgl8L5Fo5nEzA7Lc1wlzMwtu1pW2wSxGBDn6EmKsWTkC0/1eCMBZE2uMpMPtxoAL40BHXiQrAg4DxIsFD2Xqm58ZeRTJzJnN43KVYKlkBCb/kURLLQQ9rLM/iRvkXsKEocCnidtRMWnz4uByiGEQpb/SUb5mbgPerp+PJ3PkPWjkmYvWOZQfPeJBHtkp5ZIqphb1BCRea6Ji/gaYb+LtbD39isx6IQnpis0QQInZ1e3f8SPzdIsOftB2QjihxzbmMXNpA03r3Be0TXJ7urYgGWX+HxbbG+Atrgu+FClnu0lsY6436lyP/Xaim2uam8C60a/E=
   matrix:
     # GNU ELPA and MELPA provides rsync access, so use it
-    # - elpa=gnu
+    - elpa=gnu
     # - elpa=melpa
     # - elpa=melpa-stable
     # uncommon and uneasy to download
