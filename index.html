@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-11-20 Mon 12:25 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ELPA 镜像 - Emacs China</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Emacs China" />
+<link rel="apple-touch-icon" type="image/png" href="https://emacs-china.org/uploads/default/original/1X/ebb284b1e209aa93c9744227e1374130f8190aec.png">
+<link rel="icon" sizes="144x144" href="https://emacs-china.org/uploads/default/original/1X/ebb284b1e209aa93c9744227e1374130f8190aec.png">
+<link rel="icon" type="image/png" href="https://emacs-china.org/uploads/default/original/1X/477ac7ed14175dfd2deb65ee3c3d83d18a8906b8.ico">
+<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+<div id="content">
+<nav id="bar">
+  <div>
+        <a class="nav-link blue" href="https://emacs-china.org/"><i class="fa fa-group" aria-hidden="true"></i>&nbsp;Forum</a>
+        <a class="nav-link yellow" href="http://book.emacs-china.org" target="_blank"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;Book</a>
+        <a class="nav-link violet" href="https://elpa.emacs-china.org"><i class="fa fa-server" aria-hidden="true"></i>&nbsp;ELPA</a>
+        <a class="nav-link orange" href="http://donate.emacs-china.org"> <i class="fa fa-heart" aria-hidden="true"></i> &nbsp;Donate</a>
+        <a class="fork-us" href="https://github.com/emacs-china" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
+            &nbsp;Fork Us</a>
+  </div>
+</nav>
+<div class="heading">
+    <h1 class="heading-main">
+        <span class="img">
+            <img class="emacs-china-logo" src="./imgs/logo.png"/>
+        </span>
+        <span class="text">ELPA 镜像</span>
+    </h1>
+</div>
+
+<p>
+<a href="https://elpa.emacs-china.org/downloads"><object type="image/svg+xml" data="https://elpa.emacs-china.org/downloads-badge.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object></a>
+<a href="https://travis-ci.org/emacs-china/elpa/"><object type="image/svg+xml" data="https://elpa.emacs-china.org/last-update.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object></a>
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ELPA</th>
+<th scope="col" class="org-left">镜像地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="http://elpa.gnu.org/">GNU ELPA</a></td>
+<td class="org-left"><a href="http://elpa.zilongshanren.com/gnu/">http://elpa.zilongshanren.com/gnu/</a></td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="https://melpa.org/">MELPA</a></td>
+<td class="org-left"><a href="http://elpa.zilongshanren.com/melpa/">http://elpa.zilongshanren.com/melpa/</a></td>
+</tr>
+
+<tr>
+<td class="org-left"><a href="http://stable.melpa.org/#/">MELPA Stable</a></td>
+<td class="org-left"><a href="http://elpa.zilongshanren.com/stable-melpa/">http://elpa.zilongshanren.com/stable-melpa/</a></td>
+</tr>
+
+
+<tr>
+<td class="org-left"><a href="http://orgmode.org/elpa.html">Org</a></td>
+<td class="org-left"><a href="http://elpa.zilongshanren.com/org/">http://elpa.zilongshanren.com/org/</a></td>
+</tr>
+
+</tbody>
+</table>
+
+<p>
+如果需要 HTTPS，请将镜像地址中的 <code>http</code> 改成 <code>https</code> 。
+</p>
+
+<div id="outline-container-orgfe76ec2" class="outline-2">
+<h2 id="orgfe76ec2">使用方法</h2>
+<div class="outline-text-2" id="text-orgfe76ec2">
+<p>
+根据你的需求，设置 <code>package-archives</code> ，比如用 GNU ELPA 和 MELPA：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">  <span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> package-archives '<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span><span style="color: #2d9574;">"gnu"</span>   . <span style="color: #2d9574;">"http://elpa.zilongshanren.com/gnu/"</span><span style="color: #2d9574;">)</span>
+                           <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"melpa"</span> . <span style="color: #2d9574;">"http://elpa.zilongshanren.com/melpa/"</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org1637adb" class="outline-3">
+<h3 id="org1637adb">Spacemacs 用户</h3>
+<div class="outline-text-3" id="text-org1637adb">
+<p>
+添加下面的代码到 <code>.spacemacs</code> 的 <code>dotspacemacs/user-init()</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">  <span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> configuration-layer--elpa-archives
+      '<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span><span style="color: #2d9574;">"melpa-cn"</span> . <span style="color: #2d9574;">"http://elpa.zilongshanren.com/melpa/"</span><span style="color: #2d9574;">)</span>
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"org-cn"</span>   . <span style="color: #2d9574;">"http://elpa.zilongshanren.com/org/"</span><span style="color: #2d9574;">)</span>
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"gnu-cn"</span>   . <span style="color: #2d9574;">"http://elpa.zilongshanren.com/gnu/"</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgc3dc490" class="outline-4">
+<h4 id="orgc3dc490">develop 分支</h4>
+<div class="outline-text-4" id="text-orgc3dc490">
+<p>
+使用 <code>configuration-layer-elpa-archives</code> 代替原来的 <code>configuration-layer--elpa-archives</code> （ <code>--</code> 换成 <code>-</code> ）
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">  <span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">setq</span> configuration-layer-elpa-archives
+      '<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span><span style="color: #2d9574;">"melpa-cn"</span> . <span style="color: #2d9574;">"http://elpa.zilongshanren.com/melpa/"</span><span style="color: #2d9574;">)</span>
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"org-cn"</span>   . <span style="color: #2d9574;">"http://elpa.zilongshanren.com/org/"</span><span style="color: #2d9574;">)</span>
+        <span style="color: #2d9574;">(</span><span style="color: #2d9574;">"gnu-cn"</span>   . <span style="color: #2d9574;">"http://elpa.zilongshanren.com/gnu/"</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org913fa56" class="outline-3">
+<h3 id="org913fa56">Cask 用户</h3>
+<div class="outline-text-3" id="text-org913fa56">
+<p>
+<a href="https://github.com/cask/cask">Cask</a> 是一个 Emacs Lisp 的项目管理工具。这里还是以 GNU ELPA 和 MELPA 为例，在添加下面的代码到 <code>Cask</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-emacs-lisp">  <span style="color: #4f97d7;">(</span>source <span style="color: #2d9574;">"gnu"</span>   <span style="color: #2d9574;">"http://elpa.zilongshanren.com/gnu/"</span><span style="color: #4f97d7;">)</span>
+  <span style="color: #4f97d7;">(</span>source <span style="color: #2d9574;">"melpa"</span> <span style="color: #2d9574;">"http://elpa.zilongshanren.com/melpa/"</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcfcfd59" class="outline-2">
+<h2 id="orgcfcfd59">镜像说明</h2>
+<div class="outline-text-2" id="text-orgcfcfd59">
+<p>
+使用https://github.com/d12frosted/elpa-mirror作为镜像, 每8个小时同步一次
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb7a6b70" class="outline-2">
+<h2 id="orgb7a6b70">用 Rsync 同步本镜像</h2>
+<div class="outline-text-2" id="text-orgb7a6b70">
+<p>
+整个镜像约占 7.9 GB，地址为：(注意，由于本站带宽有限，在同步本镜像的时候，请设置同步速度限制，限制速度为1M，感谢！)
+</p>
+
+<p>
+下游 Tsinghua Mirrors 的 <a href="https://mirrors.tuna.tsinghua.edu.cn/help/elpa/">ELPA 镜像</a> 也提供了 Rsync 服务，地址是：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-undefined">  rsync://mirrors.tuna.tsinghua.edu.cn/elpa/
+</pre>
+</div>
+
+<p>
+上游 <a href="https://github.com/emacs-china/elpa/issues/30">GNU ELPA</a> 和 <a href="https://github.com/melpa/melpa/issues/4020">MELPA</a> 提供了 Rsync 服务，其地址分别为：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-undefined">  rsync://elpa.gnu.org/elpa/
+  rsync://melpa.org/packages/
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgecd650b" class="outline-2">
+<h2 id="orgecd650b">News</h2>
+<div class="outline-text-2" id="text-orgecd650b">
+<ul class="org-ul">
+<li>2017/01/16 VPS 带宽从 1 Mbps 升级至 2 Mbps</li>
+<li>2016/12/02 域名更改为 <code>elpa.emacs-china.org</code> 。原来使用的 <code>elpa.zilongshanren.com</code> 的 HTTP、HTTPS 和 Rsync 仍照常工作</li>
+<li>2016/11/25 添加 Sunrise Commander ELPA 和 user42 ELPA</li>
+<li>2021/8/22 使用https://github.com/d12frosted/elpa-mirror作为镜像</li>
+
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbe44297" class="outline-2">
+<h2 id="orgbe44297">报告问题</h2>
+<div class="outline-text-2" id="text-orgbe44297">
+<p>
+<a href="https://github.com/emacs-china/elpa/issues">https://github.com/emacs-china/elpa/issues</a>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>

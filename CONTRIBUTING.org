@@ -1,0 +1,14 @@
+#+STARTUP: showall
+
+* Contributing
+
+Everyone is welcome to contribute to =elpa-mirror= project. Feature requests,
+proposals, issue reports, documentation improvements, code patches - just to
+name few things that the project can gain from.
+
+Please note that the main upstream of =elpa-mirror= is located on [[https://gitlab.com/d12frosted/elpa-mirror][GitLab]], and
+it's advisable to send your contributions there. But they can be accepted also
+via [[mailto:boris@d12frosted.io][email]] and [[https://github.com/d12frosted/elpa-mirror][GitHub]].
+
+Happy hacking!
+

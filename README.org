@@ -1,0 +1,67 @@
+* =elpa-mirror=
+
+Mirrors for some Emacs package archives. These mirrors should be used only when
+official repository is temporarily down. Maintained using [[https://github.com/d12frosted/mirror-elpa][mirror-elpa]].
+
+** Usage - GitHub
+
+Just setup =package-archives= in your =init.el= file.
+
+#+BEGIN_SRC emacs-lisp
+  (setq package-archives
+        '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
+          ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
+          ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")))
+#+END_SRC
+
+** Usage - GitLab
+
+Just setup =package-archives= in your =init.el= file.
+
+#+BEGIN_SRC emacs-lisp
+  (setq package-archives
+        '(("melpa" . "https://gitlab.com/d12frosted/elpa-mirror/raw/master/melpa/")
+          ("org"   . "https://gitlab.com/d12frosted/elpa-mirror/raw/master/org/")
+          ("gnu"   . "https://gitlab.com/d12frosted/elpa-mirror/raw/master/gnu/")))
+#+END_SRC
+
+** Usage - Local
+
+First, you need to clone this repository.
+
+#+BEGIN_SRC bash
+  $ git clone --depth 1 git@gitlab.com:d12frosted/elpa-mirror.git ~/.elpa-mirror
+#+END_SRC
+
+And then setup =package-archives= in your =init.el= file.
+
+#+BEGIN_SRC emacs-lisp
+  (setq package-archives
+        `(("melpa" . ,(concat user-home-directory ".elpa-mirror/melpa/"))
+          ("org"   . ,(concat user-home-directory ".elpa-mirror/org/"))
+          ("gnu"   . ,(concat user-home-directory ".elpa-mirror/gnu/"))))
+#+END_SRC
+
+** Usage with Spacemacs
+
+To use =elpa-mirror= with Spacemacs, you need to modify
+=configuration-layer-elpa-archives=. To do so, just add following code to the
+=dotspacemacs/init= function.
+
+#+BEGIN_SRC emacs-lisp
+  ;; remote
+  (setq configuration-layer-elpa-archives
+        '(("melpa" . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/melpa/")
+          ("org"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/org/")
+          ("gnu"   . "https://raw.githubusercontent.com/d12frosted/elpa-mirror/master/gnu/")))
+
+  ;; local
+  (setq configuration-layer-elpa-archives
+        `(("melpa" . ,(concat user-home-directory ".elpa-mirror/melpa/"))
+          ("org"   . ,(concat user-home-directory ".elpa-mirror/org/"))
+          ("gnu"   . ,(concat user-home-directory ".elpa-mirror/gnu/"))))
+#+END_SRC
+
+For more grained control over =package-archives= (e. g. if you wish to use
+mirror only when one of the official repositories is down) checkout how it's
+implemented in Spacemacs.
